@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b3d5c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Ski Serial Check</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Ski Serial Check</h1>
+    <span id="listBadge" class="badge">No list</span>
+  </header>
+
+  <main>
+    <!-- SCAN -->
+    <section id="tab-scan" class="tab active" aria-labelledby="nav-scan">
+      <div class="camera" id="camera">
+        <video id="video" playsinline muted></video>
+        <div class="guide" id="guide"><span>Fit the serial number inside the box</span></div>
+        <div class="camera-placeholder" id="cameraPlaceholder">
+          <p>Point the camera at the serial number on the ski.</p>
+          <button id="startCam" class="primary">Start camera</button>
+          <label class="secondary file-btn">Use a photo
+            <input id="photoInput" type="file" accept="image/*" capture="environment" hidden>
+          </label>
+        </div>
+        <div class="cam-status" id="camStatus" hidden></div>
+      </div>
+
+      <div class="cam-controls" id="camControls" hidden>
+        <button id="ocrBtn" class="primary big">Read serial number</button>
+        <button id="torchBtn" class="secondary" hidden aria-pressed="false">Light</button>
+        <button id="stopCam" class="secondary">Stop</button>
+      </div>
+      <p class="hint" id="barcodeHint" hidden>Barcodes are detected automatically.</p>
+
+      <div id="candidates" class="candidates" hidden>
+        <p class="small">Recognised text – tap the correct serial number:</p>
+        <div id="candidateChips" class="chips"></div>
+      </div>
+
+      <form id="checkForm" class="check-form" autocomplete="off">
+        <input id="serialInput" inputmode="text" autocapitalize="characters" spellcheck="false"
+               placeholder="Serial number" aria-label="Serial number">
+        <button type="submit" class="primary">Check</button>
+      </form>
+
+      <div id="result" class="result" hidden aria-live="polite"></div>
+    </section>
+
+    <!-- LIST -->
+    <section id="tab-list" class="tab" aria-labelledby="nav-list" hidden>
+      <div class="card">
+        <h2>Serial number list</h2>
+        <p id="listSummary" class="small">No list loaded yet.</p>
+        <div class="row">
+          <label class="primary file-btn">Import file (CSV / TXT)
+            <input id="fileInput" type="file" accept=".csv,.txt,.tsv,text/csv,text/plain" hidden>
+          </label>
+          <button id="sampleBtn" class="secondary">Load sample list</button>
+        </div>
+        <details>
+          <summary>…or paste the list</summary>
+          <textarea id="pasteArea" rows="7" placeholder="One serial per line, or CSV with a header row, e.g.&#10;Serial;Model;Owner&#10;20123456;Speedmax;Ola"></textarea>
+          <button id="pasteBtn" class="primary">Use pasted list</button>
+        </details>
+        <div id="columnPick" class="row" hidden>
+          <label for="columnSelect">Serial number column:</label>
+          <select id="columnSelect"></select>
+        </div>
+        <p class="small muted">Excel files: use “Save as → CSV” first. The list stays on this phone only.</p>
+      </div>
+
+      <div class="card" id="listCard" hidden>
+        <div class="row space">
+          <h2>Entries</h2>
+          <button id="clearList" class="danger small-btn">Remove list</button>
+        </div>
+        <input id="listFilter" type="search" placeholder="Search list" aria-label="Search list">
+        <div class="table-wrap"><table id="listTable"></table></div>
+        <p id="listMore" class="small muted"></p>
+      </div>
+    </section>
+
+    <!-- HISTORY -->
+    <section id="tab-history" class="tab" aria-labelledby="nav-history" hidden>
+      <div class="card">
+        <div class="row space">
+          <h2>Scan history</h2>
+          <div class="row">
+            <button id="exportHistory" class="secondary small-btn">Export CSV</button>
+            <button id="clearHistory" class="danger small-btn">Clear</button>
+          </div>
+        </div>
+        <p id="historySummary" class="small"></p>
+        <ul id="historyList" class="history"></ul>
+      </div>
+    </section>
+  </main>
+
+  <nav class="tabbar" role="tablist">
+    <button id="nav-scan" role="tab" data-tab="scan" aria-selected="true">Scan</button>
+    <button id="nav-list" role="tab" data-tab="list" aria-selected="false">List</button>
+    <button id="nav-history" role="tab" data-tab="history" aria-selected="false">History</button>
+  </nav>
+
+  <canvas id="frame" hidden></canvas>
+  <script src="vendor/zxing-library.min.js" defer></script>
+  <script src="vendor/zxing-browser.min.js" defer></script>
+  <script src="vendor/tesseract.min.js" defer></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

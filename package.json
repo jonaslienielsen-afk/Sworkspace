@@ -1,0 +1,25 @@
+{
+  "name": "ski-serial-scanner",
+  "version": "1.0.0",
+  "description": "Mobile web app that scans serial numbers on cross-country skis and checks them against a list",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "node scripts/build.mjs && node scripts/serve.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonaslienielsen-afk/Sworkspace.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jonaslienielsen-afk/Sworkspace/issues"
+  },
+  "homepage": "https://github.com/jonaslienielsen-afk/Sworkspace#readme",
+  "dependencies": {
+    "@tesseract.js-data/eng": "1.0.0",
+    "@zxing/browser": "0.2.1",
+    "tesseract.js": "7.0.0"
+  },
+  "type": "module",
+  "private": true
+}
