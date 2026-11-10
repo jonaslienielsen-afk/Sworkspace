@@ -1,8 +1,12 @@
 """Bull Superski "Glidprosjektet" fluor-free glide tests, transcribed by hand
 from the report images at https://bullsuperski.no/glidprosjektet/ (seasons
-2024/25 and 2025/26, 18 reports).
+2024/25 and 2025/26, 18 reports) plus the 2023/24 "Produkttest" reports (11
+tests). The 2024 heading on that page is empty, so the 2023/24 reports were
+found in the site's public media library (wp-json/wp/v2/media).
 
 Each test lists:
+  - places (optional): the placing of each podium entry when there are ties,
+    e.g. [1, 1, 3, 3]; default is 1, 2, 3.
   - conditions (air temp, snow temp, snow humidity %, snow type, weather)
   - the podium (1st, 2nd, 3rd). The reports only rank the top 3; every other
     product is listed as "also in the test" without a placing.
@@ -19,6 +23,176 @@ layer first). The original wording is kept in `notes` where it matters.
 # snow_temp_est=True means the report gave no snow temperature and the value is
 # an estimate (snow cannot be warmer than 0 C; on a cold day it is close to air).
 TESTS = [
+    # ------------------------------------------------------------- 2023/24
+    # These reports also give air humidity (air_hum). Base layer under the
+    # tested products was Swix Base Protection Liquid (BPL), Swix PS6 or PS5.
+    dict(id="2023-12-14", date="2023-12-14", season="2023/24", title="Fluorfritest 14. desember",
+         kind="Topcoat (Swix BPL base on all)", air=-5, air_hum=96, snow=-5, snow_temp_est=False,
+         hum_min=18, hum_max=22, snow_type="Mix of man-made and new snow", weather="Overcast",
+         places=[1, 2, 3, 3],
+         podium=[
+             ("Skigo FFR Blue liquid", "Liquid", "Sponge on bottle, dry 30 min, rotor fleece",
+              "Fine steel by hand (2-3 light strokes), rotor nylon"),
+             ("Holmenkol Syntec FF1 Red", "Powder", "Iron 200C", "Rotor horsehair and steel"),
+             ("Star Next Med", "Powder", "Iron 200C", "Rotor horsehair and steel"),
+             ("Swix TSP6", "Powder", "Iron 180C", "Rotor horsehair and steel"),
+         ],
+         others=["Toko HP Red", "Skigo FFR Red", "Maplus GM Boost Med", "Vauhti LDR New Snow liquid"],
+         best_feel="Skigo FFR Blue liquid",
+         distance="Same gap between 1st and 2nd after 7 km",
+         notes="Even between the top four. Surprising that a liquid won; it was also best on feel. "
+               "The other liquid in the test did not reach the top."),
+    dict(id="2024-01-11", date="2024-01-11", season="2023/24", title="Fluorfritest 11. januar",
+         kind="Topcoat (Swix BPL base on all)", air=4.8, air_hum=57, snow=-1, snow_temp_est=False,
+         hum_min=22, hum_max=22, snow_type="Natural snow on man-made base", weather="Partly cloudy",
+         podium=[
+             ("Skigo LDQ", "Powder", "Iron 200C", "Rotor horsehair and steel"),
+             ("Rode RXL Warm liquid", "Liquid", "Felt block + rotor fleece", "Fine steel + rotor nylon"),
+             ("Holmenkol Syntec FF1 Red", "Powder", "Iron 200C", "Rotor horsehair and steel"),
+         ],
+         others=["Toko HP Yellow glider", "Vauhti Old Snow Warm liquid", "Maplus Base Gel + Maplus Boost liquid",
+                 "Red Creek FF Lilla", "Star Next Med"],
+         best_feel="",
+         distance="Finalists retested after 5 km: the winner only increased its margin",
+         notes="Clear winner. Tendency that powder/glider applied with high heat beat those applied "
+               "with low heat."),
+    dict(id="2024-01-18", date="2024-01-18", season="2023/24", title="Fluorfritest 18. januar",
+         kind="Topcoat (Swix PS6 base on all)", air=-7.2, air_hum=68, snow=-7, snow_temp_est=False,
+         hum_min=15, hum_max=15, snow_type="New snow (snowed 17 Jan)", weather="Sun",
+         podium=[
+             ("Skigo FFR Blue", "Powder", "Iron 200C", "Rotor horsehair and steel"),
+             ("Toko HP Blue", "Powder", "Iron 200C", "Rotor horsehair and steel"),
+             ("Swix TSP5", "Powder", "Iron 200C", "Rotor horsehair and steel"),
+         ],
+         others=["Swix TSP5 (ironed 160C)", "Vauhti Race Cold New Snow glider", "Red Creek FF Lilla",
+                 "Rode R20", "Rex NF21G liquid"],
+         best_feel="",
+         notes="Even between the top two, bigger gaps below. Rode R20 a good cheaper alternative. "
+               "Skis zeroed before the test."),
+    # Two images exist for 25 Jan: identical results, one mislabelled "18. januar".
+    dict(id="2024-01-25", date="2024-01-25", season="2023/24", title="Fluorfritest 25. januar",
+         kind="Topcoat (Swix PS6 base on all)", air=1, air_hum=74, snow=-2, snow_temp_est=False,
+         hum_min=30, hum_max=30, snow_type="Transformed with some new snow", weather="Sun",
+         places=[1, 1, 3, 3],
+         podium=[
+             ("Toko HP Yellow", "Powder", "Iron 200C", "Rotor horsehair and steel"),
+             ("Vauhti LDR New Snow liquid", "Liquid", "Sponge on bottle, rotor felt", "Fine steel, blue nylon"),
+             ("Skigo FFR Red liquid", "Liquid", "Sponge on bottle, rotor felt", "Fine steel, blue nylon"),
+             ("Swix TS10 liquid", "Liquid", "Felt pad, rotor felt", "Fine steel, blue nylon"),
+         ],
+         others=["Maplus GM Hot", "Maplus GM Hot + Maplus Boost Hot liquid", "Rex NF11 liquid", "Maplus BP1 Hot"],
+         best_feel="",
+         notes="Very even, very little between the top four. Maplus BP1 Hot not far behind as a "
+               "cheaper alternative. Skis zeroed before the test."),
+    # Two versions exist for 26 Jan with different placings. The later upload
+    # (12:04 vs 11:28) is used: 1. Skigo FFR Red, 2= Swix TSP7, 2= Rode.
+    # The earlier version had 1= Swix TSP7, 1= Rode Endurance + RXL Warm, 3. Skigo FFR Red.
+    dict(id="2024-01-26", date="2024-01-26", season="2023/24", title="Fluorfritest 26. januar",
+         kind="Topcoat (Swix PS6 base on all)", air=-1, air_hum=99, snow=-1, snow_temp_est=False,
+         hum_min=25, hum_max=35, snow_type="New snow over transformed", weather="Snowing",
+         places=[1, 2, 2],
+         podium=[
+             ("Skigo FFR Red", "Powder", "Iron 200C", "Rotor horsehair and steel"),
+             ("Swix TSP7", "Powder", "Iron 200C", "Rotor horsehair and steel"),
+             ("Rode Endurance + Rode RXL Warm liquid", "Glider + liquid", "Iron 155C, felt pad + felt rotor",
+              "Rotor horsehair and steel + fine steel, blue nylon"),
+         ],
+         others=["Vauhti LDR New Snow liquid", "Swix White Marathon", "Swix TS10 liquid", "Toko HP Yellow",
+                 "Toko HP glider"],
+         best_feel="",
+         notes="Three products stood out, bigger gaps below. NB: the site has two versions of this "
+               "report; an earlier one had Swix TSP7 and Rode Endurance + RXL Warm tied 1st and "
+               "Skigo FFR Red 3rd. The later upload is used here."),
+    dict(id="2024-02-01", date="2024-02-01", season="2023/24", title="Fluorfritest 1. februar",
+         kind="Topcoat (Swix BPL base on all)", air=1, air_hum=99, snow=-0.5, snow_temp_est=False,
+         hum_min=32, hum_max=40, snow_type="Powdery layer of new snow over transformed", weather="Clear",
+         podium=[
+             ("Rex NF11 liquid", "Liquid", "Felt block, cure 20 min, rotor felt", "Fine steel by hand + blue nylon rotor"),
+             ("Maplus BP1 Hot", "Liquid", "Felt block + rotor felt after drying", "Fine steel by hand + nylon rotor"),
+             ("Skigo FFR Yellow", "Powder", "Iron 200C", "Rotor horsehair + fine steel + nylon"),
+         ],
+         others=["Vauhti LDR Old Snow", "Swix TS10 liquid", "Toko HP Yellow", "Star Next Warm liquid",
+                 "Swix White Marathon + Swix TST8 block"],
+         best_feel="",
+         notes="Two good options at the top. Skigo FFR Yellow (3rd) is more durable, a good choice "
+               "for long races. Skis zeroed before the test."),
+    dict(id="2024-02-02", date="2024-02-02", season="2023/24", title="Fluorfritest 2. februar",
+         kind="Topcoat (Swix BPL base on all)", air=0, air_hum=99, snow=-3, snow_temp_est=False,
+         hum_min=20, hum_max=36, snow_type="Fresh new snow over transformed", weather="Snowing",
+         places=[1, 2, 2],
+         podium=[
+             ("Toko HP Yellow liquid", "Liquid", "Felt block, cure 20 min, rotor felt",
+              "Fine steel by hand + blue nylon rotor"),
+             ("Swix TS10 liquid", "Liquid", "Felt block + rotor felt after drying", "Nylon rotor"),
+             ("Rex G41 liquid", "Liquid", "Felt block + rotor felt after drying", "Fine steel by hand + nylon rotor"),
+         ],
+         others=["Maplus BP1 Hot", "Swix White Marathon", "Skigo FFR Yellow", "Rex NF11 liquid",
+                 "Maplus BP1 Hot (with wool)"],
+         best_feel="",
+         notes="Very even top 3. The two yellow products could gain in warmer/wetter snow; the Rex "
+               "option tolerates icier/sharper snow. Swix White Marathon was 4th and works well as a "
+               "base for the liquids."),
+    dict(id="2024-02-08", date="2024-02-08", season="2023/24", title="Fluorfritest 8. februar",
+         kind="Topcoat (Swix PS5 base on all)", air=-11, air_hum=92, snow=-10, snow_temp_est=False,
+         hum_min=27, hum_max=27, snow_type="Fresh snow over transformed", weather="Partly cloudy",
+         places=[1, 2, 3, 3],
+         podium=[
+             ("Toko HP Blue", "Powder", "Iron 200C", "Rotor horsehair / steel / horsehair, blue nylon"),
+             ("Skigo LDQ", "Powder", "Iron 200C", "Rotor horsehair and steel"),
+             ("Skigo FFR Green", "Powder", "Iron 200C", "Rotor horsehair and steel"),
+             ("Swix TSP5", "Powder", "Iron 200C", "Rotor horsehair and steel"),
+         ],
+         others=["Swix White Marathon", "Skigo FFR Blue", "Star Next Cold", "Vauhti Polar"],
+         best_feel="",
+         notes="Even test."),
+    dict(id="2024-02-15", date="2024-02-15", season="2023/24", title="Fluorfritest 15. februar",
+         kind="Base layer (topcoat Swix TSP7 on all, over Swix BPL)", air=-1, air_hum=99, snow=-1,
+         snow_temp_est=False, hum_min=21, hum_max=32, snow_type="Fresh snow", weather="Overcast",
+         podium=[
+             ("Swix White Marathon", "Base powder", "Iron 200C", "Rotor horsehair and steel"),
+             ("Vauhti GW Polar liquid", "Base liquid", "From bottle + rotor felt", "Fine steel and blue nylon"),
+             ("(no base layer)", "-", "-", "-"),
+         ],
+         others=["Swix HS5", "Swix PS6", "Rode Endurance", "Vauhti GW Polar", "Swix White Marathon block"],
+         best_feel="",
+         distance="1st and 2nd retested after 8 km: Swix White Marathon an even clearer winner",
+         notes="Base-glider test for speed and wear, relevant for long races. Fairly large gaps "
+               "further down. Placings are for the base layer; Swix TSP7 was the topcoat on every ski."),
+    dict(id="2024-02-22", date="2024-02-22", season="2023/24", title="Fluorfritest 22. februar",
+         kind="Topcoat, powder vs liquid (Swix BPL base on all)", air=2, air_hum=99, snow=0,
+         snow_temp_est=False, hum_min=50, hum_max=65, snow_type="Coarse, wet", weather="Rain",
+         places=[1, 2, 2],
+         podium=[
+             ("Swix TSP10 + Swix HS10 liquid", "Powder + liquid",
+              "Iron 200C; liquid with felt block, cure 20 min, rotor fleece",
+              "Rotor horsehair/steel on powder; fine steel and rotor nylon on liquid"),
+             ("Toko HP Yellow liquid", "Liquid", "Felt pad, rotor fleece", "Fine steel and rotor nylon"),
+             ("Rex NFX11", "Powder", "Iron 200C", "Rotor horsehair and steel"),
+         ],
+         others=["Toko HP Yellow", "Rex Sisu White", "Skigo FFR Yellow", "Skigo N3", "Vauhti Race Warm Old Snow liquid"],
+         best_feel="",
+         distance="Rex NFX11 vs Toko HP Yellow liquid after 6 and 12 km: the powder held up somewhat better",
+         notes="Powder and liquid test in rain. Surprisingly close at the top, bigger gaps below. "
+               "Best pure liquid and best pure powder were equal, just behind the powder + liquid winner. "
+               "Rex NFX11 the better choice for a long race in these conditions."),
+    dict(id="2024-03-07", date="2024-03-07", season="2023/24", title="Fluorfritest 7. mars",
+         kind="Topcoat (Swix BPL base on all)", air=2, air_hum=69, snow=0, snow_temp_est=False,
+         hum_min=34, hum_max=34, snow_type="Coarse, transformed", weather="Clear, sun",
+         podium=[
+             ("Rex G41 liquid", "Liquid", "Sponge on bottle, cure 6 h, rotor felt",
+              "Fine steel + rotor horsehair + rotor blue nylon"),
+             ("Rex NF41 liquid", "Liquid", "Felt block + rotor felt", "Fine steel + rotor horsehair + rotor blue nylon"),
+             ("Toko Jet Yellow + Toko Jet Yellow liquid", "Powder + liquid", "Iron 180C + 2 layers of spray",
+              "Rotor horsehair, steel, nylon; liquid: nylon"),
+         ],
+         others=["Toko HP Yellow", "Toko Jet Yellow", "Star Dark Warm", "Toko Jet Yellow liquid + Toko Jet Yellow",
+                 "Toko Jet Red"],
+         best_feel="Rex G41 liquid",
+         distance="1st and 3rd retested after 10 km: the powder version gained a little, not enough; "
+                  "it was slightly better on drier, sun-dried parts of the track",
+         notes="New Toko products with different methods, plus new Rex and Star products; Rex G41 "
+               "as reference. Rex G41 a clear winner, also best on feel (good release). Curing 6 h "
+               "improved durability."),
     # ------------------------------------------------------------- 2024/25
     dict(id="2025-01-09", date="2025-01-09", season="2024/25", title="Fluorfritest 9. januar",
          kind="Topcoat", air=-3, snow=-4, snow_temp_est=True, hum_min=24, hum_max=24,
@@ -277,7 +451,6 @@ TESTS = [
 COMPONENTS = {
     "HWK UHX Warm powder + HWK UHX Warm liquid": ["HWK UHX Warm"],
     "Swix TSP10 + Toko Jet Warm liquid": ["Swix TSP10", "Toko Jet Warm liquid"],
-    "Swix TSP10 + Swix TS10": ["Swix TSP10", "Swix TS10"],
     "Skigo GRP + Skigo LDQ": ["Skigo GRP", "Skigo LDQ"],
     "Swix PS6 + Rex G41 liquid": ["Swix PS6", "Rex G41 liquid"],
     "Swix White Marathon + Swix TS6 liquid": ["Swix White Marathon", "Swix TS6 liquid"],
@@ -310,7 +483,23 @@ COMPONENTS = {
     "Skigo FFR Yellow (Skigo horsehair+steel+nylon brushes)": ["Skigo FFR Yellow"],
     "Skigo FFR Yellow (Toko horsehair+copper+nylon brushes)": ["Skigo FFR Yellow"],
     "Washed ski (Toko racing wax remover)": ["(washed ski, no wax)"],
+    "Swix TSP10 + Swix TS10": ["Swix TSP10", "Swix TS10 liquid"],
+    "Swix TSP5 (ironed 160C)": ["Swix TSP5"],
+    "Maplus Base Gel + Maplus Boost liquid": ["Maplus Base Gel", "Maplus Boost liquid"],
+    "Maplus GM Hot + Maplus Boost Hot liquid": ["Maplus GM Hot", "Maplus Boost Hot liquid"],
+    "Rode Endurance + Rode RXL Warm liquid": ["Rode Endurance", "Rode RXL Warm liquid"],
+    "Swix White Marathon + Swix TST8 block": ["Swix White Marathon", "Swix TST8 block"],
+    "Maplus BP1 Hot (with wool)": ["Maplus BP1 Hot"],
+    "Swix TSP10 + Swix HS10 liquid": ["Swix TSP10", "Swix HS10 liquid"],
+    "Toko Jet Yellow + Toko Jet Yellow liquid": ["Toko Jet Yellow", "Toko Jet Yellow liquid"],
+    "Toko Jet Yellow liquid + Toko Jet Yellow": ["Toko Jet Yellow liquid", "Toko Jet Yellow"],
 }
+
+
+def podium_places(t):
+    """[(place, name, type, application, removal)] - handles tied places."""
+    places = t.get("places") or list(range(1, len(t["podium"]) + 1))
+    return [(p, *row) for p, row in zip(places, t["podium"])]
 
 
 def components(name):
@@ -327,10 +516,11 @@ def condition_class(t):
     h = hum_mid(t)
     if h >= 55:
         return "C: Wet (>=55% humidity, snow ~0C)"
-    if t["snow"] <= -4.5 or h < 25:
-        return "A: Cold / dry (snow <= -4.5C or <25% humidity)"
-    return "B: Medium / transformed (25-55% humidity, snow -4 to 0C)"
+    if t["snow"] <= -4.5 or (h < 25 and t["snow"] <= -3):
+        return "A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C)"
+    return "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)"
 
 
 # Placing points: winner 3, 2nd 2, 3rd 1, tested but off the podium 0.
+# Tied products get the points of the shared place (1=, 1= -> 3 each).
 POINTS = {1: 3, 2: 2, 3: 1}

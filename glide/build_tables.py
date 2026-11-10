@@ -11,7 +11,7 @@ Run: python3 build_tables.py
 import csv
 from collections import defaultdict
 
-from glide_data import TESTS, POINTS, components, condition_class, hum_mid
+from glide_data import TESTS, POINTS, components, condition_class, hum_mid, podium_places
 
 CLASSES = sorted({condition_class(t) for t in TESTS})
 
@@ -27,15 +27,19 @@ def test_rows():
             "Date": t["date"], "Season": t["season"], "Report": t["title"], "Test type": t["kind"],
             "Air temp C": t["air"], "Snow temp C": t["snow"],
             "Snow temp estimated": "yes" if t["snow_temp_est"] else "",
+            "Air humidity %": t.get("air_hum", ""),
             "Snow humidity %": f"{t['hum_min']}" if t["hum_min"] == t["hum_max"] else f"{t['hum_min']}-{t['hum_max']}",
             "Humidity mid %": hum_mid(t), "Snow type": t["snow_type"], "Weather": t["weather"],
             "Condition class": condition_class(t),
         }
-        for i, (name, typ, app, rem) in enumerate(t["podium"], 1):
-            r[f"{i}. place"] = name
-            r[f"{i}. type"] = typ
-            r[f"{i}. application"] = app
-            r[f"{i}. removal/brushing"] = rem
+        pp = podium_places(t)
+        for i in (1, 2, 3):
+            at = [row for row in pp if row[0] == i]
+            tie = " (tie)" if len(at) > 1 else ""
+            r[f"{i}. place"] = " = ".join(x[1] for x in at) + tie
+            r[f"{i}. type"] = " = ".join(x[2] for x in at)
+            r[f"{i}. application"] = " = ".join(x[3] for x in at)
+            r[f"{i}. removal/brushing"] = " = ".join(x[4] for x in at)
         r["Also tested (unranked)"] = "; ".join(t["others"])
         r["Best feel"] = t.get("best_feel", "")
         r["Distance retest"] = t.get("distance", "")
@@ -47,7 +51,7 @@ def test_rows():
 def long_rows():
     rows = []
     for t in sorted(TESTS, key=lambda t: t["id"]):
-        items = [(n, i) for i, (n, *_ ) in enumerate(t["podium"], 1)] + [(n, None) for n in t["others"]]
+        items = [(n, p) for p, n, *_ in podium_places(t)] + [(n, None) for n in t["others"]]
         for name, place in items:
             rows.append({
                 "Date": t["date"], "Test id": t["id"], "Condition class": condition_class(t),
@@ -67,7 +71,7 @@ def product_stats():
     best = defaultdict(dict)  # product -> test id -> best placing (None = unranked)
     tests_by_id = {t["id"]: t for t in TESTS}
     for t in TESTS:
-        items = [(n, i) for i, (n, *_ ) in enumerate(t["podium"], 1)] + [(n, None) for n in t["others"]]
+        items = [(n, p) for p, n, *_ in podium_places(t)] + [(n, None) for n in t["others"]]
         for name, place in items:
             for c in components(name):
                 cur = best[c].get(t["id"], "unset")
@@ -139,11 +143,14 @@ def md_table(rows, cols):
 
 def write_md(path, tests, stats):
     lines = ["# Bull Superski glide project - all tests\n",
-             "Source: https://bullsuperski.no/glidprosjektet/ (18 reports, Jan 2025 - Mar 2026, "
-             "transcribed from the report images). Rebuild with `python3 build_tables.py`.\n",
+             f"Source: https://bullsuperski.no/glidprosjektet/ ({len(TESTS)} tests, Dec 2023 - Mar 2026, "
+             "transcribed from the report images). The 2024 section of that page is empty; the "
+             "2023/24 reports were taken from the site's public media library. "
+             "Rebuild with `python3 build_tables.py`.\n",
              "## How placings are scored\n",
              "The reports rank only the top 3; the rest are listed as \"also tested\". So each result is "
              "scored **3 points for 1st, 2 for 2nd, 1 for 3rd, 0 for tested but off the podium**. "
+             "Tied products share the place and its points (two 1= both get 3). "
              "Combinations (e.g. `Swix PS6 + Toko HP Blue`) give their points to every product in them. "
              "Per product this gives:\n",
              "- **Points per test** - average points when the product was in the test (0-3).",
@@ -151,10 +158,12 @@ def write_md(path, tests, stats):
              "- **Condition-class points** - points split into A cold/dry, B medium/transformed, C wet.\n",
              "Condition classes: " + "; ".join(CLASSES) + ".\n",
              "## All tests\n",
-             md_table(tests, ["Date", "Air temp C", "Snow temp C", "Snow humidity %", "Snow type", "Weather",
+             md_table(tests, ["Date", "Air temp C", "Air humidity %", "Snow temp C", "Snow humidity %", "Snow type", "Weather",
                               "Condition class", "1. place", "2. place", "3. place", "Best feel"]),
              "\nSnow temperature for 2025-01-09 and 2025-01-16 is estimated (not in the report). "
-             "The two 08.01 reports are labelled 2025 on the site but belong to January 2026.\n",
+             "The two 08.01 reports are labelled 2025 on the site but belong to January 2026. "
+             "Air humidity is only reported for 2023/24. 2024-01-26 exists in two versions with "
+             "different placings; the later upload is used (see notes).\n",
              "## Product ranking (all tests)\n",
              md_table([s for s in stats if s["Podiums"] > 0],
                       ["Product", "Tests", "Wins", "2nd", "3rd", "Points", "Points per test", "Podium rate %",

@@ -8,7 +8,8 @@ Method (nearest-neighbour weighting):
          w = exp(-d^2 / 2)
      So a test 3 C or 12 humidity points away counts ~60%, twice that ~14%.
   2. In each test a product scores 3 (1st), 2 (2nd), 1 (3rd), 0 (tested, not on
-     the podium). A combination gives its points to each product in it.
+     the podium); tied products share the place's points. A combination gives
+     its points to each product in it.
   3. Score = sum(w * points) / sum(w over ALL tests). This is the expected
      placing points on a day like this. Products never tested in similar
      conditions get ~0, so the score rewards proven results, not lucky one-offs.
@@ -23,7 +24,7 @@ import argparse
 import math
 from collections import defaultdict
 
-from glide_data import TESTS, POINTS, components, hum_mid
+from glide_data import TESTS, POINTS, components, hum_mid, podium_places
 
 SNOW_SCALE = 3.0   # degrees C
 HUM_SCALE = 12.0   # humidity percentage points
@@ -38,8 +39,8 @@ def weights(snow, hum):
 
 
 def entries(t):
-    for place, row in enumerate(t["podium"], start=1):
-        yield row[0], POINTS[place]
+    for place, name, *_ in podium_places(t):
+        yield name, POINTS[place]
     for name in t["others"]:
         yield name, 0
 
