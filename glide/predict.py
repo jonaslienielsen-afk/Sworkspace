@@ -7,6 +7,8 @@ Method (nearest-neighbour weighting):
          d = sqrt(((snow - snow_i) / 2)^2 + ((hum - hum_i) / 30)^2)
          w = exp(-d^2 / 2)
      So a test 2 C or 30 humidity points away counts ~60%, twice that ~14%.
+     With --snow-type the weight is also multiplied by how alike the snow types
+     are (glide_data.SNOW_TYPE_SIM: same type 1.0 ... new snow vs wet 0.1).
   2. In each test a product scores 3 (1st), 2 (2nd), 1 (3rd), 0 (tested, not on
      the podium); tied products share the place's points. A combination gives
      its points to each product in it.
@@ -24,17 +26,20 @@ import argparse
 import math
 from collections import defaultdict
 
-from glide_data import TESTS, POINTS, components, hum_mid, podium_places
+from glide_data import TESTS, POINTS, components, hum_mid, podium_places, snow_type, SNOW_TYPES, SNOW_TYPE_SIM
 
 SNOW_SCALE = 2.0   # degrees C (best in validate.py, both leave-one-out and forward)
 HUM_SCALE = 30.0   # humidity percentage points (readings vary between seasons)
 
 
-def weights(snow, hum):
+def weights(snow, hum, stype=None):
     out = []
     for t in TESTS:
         d = math.hypot((snow - t["snow"]) / SNOW_SCALE, (hum - hum_mid(t)) / HUM_SCALE)
-        out.append((t, math.exp(-d * d / 2)))
+        w = math.exp(-d * d / 2)
+        if stype:
+            w *= SNOW_TYPE_SIM[stype][snow_type(t)]
+        out.append((t, w))
     return out
 
 
@@ -45,8 +50,8 @@ def entries(t):
         yield name, 0
 
 
-def predict(snow, hum, top=10):
-    ws = weights(snow, hum)
+def predict(snow, hum, top=10, stype=None):
+    ws = weights(snow, hum, stype)
     total_w = sum(w for _, w in ws)
     score = defaultdict(float)
     tested_w = defaultdict(float)
@@ -84,6 +89,8 @@ def main():
     p.add_argument("--snow-temp", type=float, help="snow temperature, C")
     p.add_argument("--air-temp", type=float, help="air temperature, C (used if --snow-temp is missing)")
     p.add_argument("--humidity", type=float, required=True, help="snow humidity, percent (snøfukt)")
+    p.add_argument("--snow-type", choices=SNOW_TYPES,
+                   help="new, fine, new_over_old, transformed or wet (omit if unsure)")
     p.add_argument("--top", type=int, default=10)
     a = p.parse_args()
     if a.snow_temp is None:
@@ -91,8 +98,9 @@ def main():
             p.error("give --snow-temp or --air-temp")
         a.snow_temp = estimate_snow_temp(a.air_temp)
         print(f"(snow temperature estimated from air: {a.snow_temp:+.1f} C)")
-    rows, nearest = predict(a.snow_temp, a.humidity, a.top)
-    print(f"\nConditions: snow {a.snow_temp:+.1f} C, snow humidity {a.humidity:.0f}%\n")
+    rows, nearest = predict(a.snow_temp, a.humidity, a.top, a.snow_type)
+    print(f"\nConditions: snow {a.snow_temp:+.1f} C, snow humidity {a.humidity:.0f}%, "
+          f"snow type {a.snow_type or 'unknown'}\n")
     print("Most similar past tests:")
     for t, w in nearest:
         print(f"  {t['date']}  snow {t['snow']:+5.1f} C  hum {hum_mid(t):4.0f}%  weight {w:4.2f}  "

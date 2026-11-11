@@ -1,5 +1,5 @@
 import {
-  estimateSnowTemp, conditionClass, CLASS_LABELS, rankProducts, similarTests, evidenceLabel, productStats,
+  estimateSnowTemp, rankProducts, similarTests, evidenceLabel, productStats,
 } from './model.js';
 
 const $ = (id) => document.getElementById(id);
@@ -9,7 +9,8 @@ const place = (p) => ['', '1st', '2nd', '3rd'][p] || `${p}th`;
 const fmtDate = (d) => new Date(`${d}T12:00:00`).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
 
 let TESTS = [];
-const state = { mode: 'snow', snow: -3, air: -2, hum: 35, humUnknown: false };
+let SNOW = { order: [], labels: {}, sim: {} };
+const state = { mode: 'snow', snow: -3, air: -2, hum: 35, humUnknown: false, snowType: '' };
 const STORE = 'glide-picker-v1';
 
 function load() {
@@ -21,7 +22,11 @@ function save() {
 
 function conditions() {
   const snow = state.mode === 'snow' ? state.snow : estimateSnowTemp(state.air);
-  return { snow, hum: state.humUnknown ? null : state.hum };
+  return {
+    snow,
+    hum: state.humUnknown ? null : state.hum,
+    typeSim: state.snowType ? SNOW.sim[state.snowType] : null,
+  };
 }
 
 // ---------------------------------------------------------------- inputs
@@ -47,6 +52,9 @@ function syncInputs() {
   $('humUnknown').checked = state.humUnknown;
   for (const b of $('humChips').children) b.classList.toggle('on', !state.humUnknown && Number(b.dataset.hum) === state.hum);
   $('humChips').classList.toggle('disabled', state.humUnknown);
+
+  $('typeOut').textContent = state.snowType ? SNOW.labels[state.snowType] : 'Not sure';
+  for (const b of $('typeChips').children) b.classList.toggle('on', b.dataset.type === state.snowType);
 }
 
 function setTemp(v) {
@@ -75,6 +83,9 @@ function bindInputs() {
     };
   }
   for (const b of $('humChips').children) b.onclick = () => setHum(Number(b.dataset.hum));
+  $('typeChips').innerHTML = [['', 'Not sure'], ...SNOW.order.map((k) => [k, SNOW.labels[k]])]
+    .map(([k, label]) => `<button data-type="${k}">${esc(label)}</button>`).join('');
+  for (const b of $('typeChips').children) b.onclick = () => { state.snowType = b.dataset.type; update(); };
 }
 
 // ---------------------------------------------------------------- pick tab
@@ -96,7 +107,7 @@ function testCard(t, extra = '') {
   return `<details class="card test">
     <summary>
       <div class="test-head">
-        <div><strong>${fmtDate(t.date)}</strong> <span class="pill small cls-${t.cls[0]}">${esc(CLASS_LABELS[t.cls[0]])}</span>${extra}</div>
+        <div><strong>${fmtDate(t.date)}</strong> <span class="pill small st-${t.snowCat}">${esc(SNOW.labels[t.snowCat])}</span>${extra}</div>
         <div class="muted small">${esc(testConditions(t))}</div>
         <div class="muted small">${esc(t.snowType)}${t.weather ? ` · ${esc(t.weather)}` : ''}</div>
         <div class="winner">🥇 ${esc(t.podium.filter((e) => e.place === 1).map((e) => e.name).join(' = '))}</div>
@@ -113,6 +124,17 @@ function testCard(t, extra = '') {
   </details>`;
 }
 
+// The product's own record on the chosen snow type, e.g. "New snow: 0 pts in 1 test".
+function typeRecord(product) {
+  if (!state.snowType) return '';
+  const b = STATS_BY_PRODUCT.get(product)?.byType[state.snowType];
+  const label = { new: 'New snow', fine: 'Fine-grained', new_over_old: 'New on old', transformed: 'Transformed', wet: 'Wet' }[state.snowType];
+  if (!b) return `<span class="tag">${esc(label)}: not tested</span>`;
+  const cls = b.points === 0 ? 'ev-thin' : 'ev-strong';
+  const icon = b.points === 0 ? '⚠ ' : '';
+  return `<span class="tag ${cls}">${icon}${esc(label)}: ${b.points} pts in ${b.tests} test${b.tests === 1 ? '' : 's'}</span>`;
+}
+
 function renderResults(cond) {
   const ranked = rankProducts(TESTS, cond).filter((r) => r.score > 0).slice(0, 8);
   const max = Math.max(ranked[0]?.score || 1, 0.01);
@@ -122,7 +144,7 @@ function renderResults(cond) {
     const howHtml = how ? `
       <div class="how">
         <div class="small"><strong>How Bull applied it</strong> — ${place(how.entry.place)} on ${fmtDate(how.test.date)}
-          (snow ${fmtT(how.test.snow)}, ${how.test.hum.toFixed(0)} %)${how.entry.name !== r.product ? ` as part of <em>${esc(how.entry.name)}</em>` : ''}</div>
+          (snow ${fmtT(how.test.snow)}, ${how.test.hum.toFixed(0)} %, ${esc(SNOW.labels[how.test.snowCat].toLowerCase())})${how.entry.name !== r.product ? ` as part of <em>${esc(how.entry.name)}</em>` : ''}</div>
         <div class="small">On: ${esc(how.entry.apply)}</div>
         <div class="small">Off: ${esc(how.entry.remove)}</div>
         ${how.test.bestFeel && how.test.bestFeel.includes(r.product) ? '<div class="small">⭐ Best feel that day</div>' : ''}
@@ -139,6 +161,7 @@ function renderResults(cond) {
               <span class="tag">Score ${r.score.toFixed(2)}</span>
               <span class="tag">Podium ${(r.podiumRate * 100).toFixed(0)} %</span>
               <span class="tag ev-${ev}">Evidence: ${ev}</span>
+              ${typeRecord(r.product)}
             </div>
           </div>
         </summary>
@@ -160,22 +183,19 @@ function renderSimilar(cond) {
 function update() {
   syncInputs();
   const cond = conditions();
-  const cls = conditionClass(cond.snow, cond.hum);
-  $('classPill').textContent = CLASS_LABELS[cls];
-  $('classPill').className = `pill cls-${cls}`;
   renderResults(cond);
   renderSimilar(cond);
   save();
 }
 
 // ---------------------------------------------------------------- tests tab
-let classFilter = '';
+let typeFilter = '';
 function renderTests() {
   const q = $('testSearch').value.trim().toLowerCase();
   const list = [...TESTS].reverse().filter((t) => {
-    if (classFilter && t.cls[0] !== classFilter) return false;
+    if (typeFilter && t.snowCat !== typeFilter) return false;
     if (!q) return true;
-    const hay = [t.date, t.title, t.snowType, t.weather, t.notes, t.bestFeel, t.distance,
+    const hay = [t.date, t.title, t.snowType, SNOW.labels[t.snowCat], t.weather, t.notes, t.bestFeel, t.distance,
       ...t.podium.map((e) => e.name), ...t.others.map((o) => o.name)].join(' ').toLowerCase();
     return hay.includes(q);
   });
@@ -185,6 +205,7 @@ function renderTests() {
 
 // ---------------------------------------------------------------- products tab
 let STATS = [];
+let STATS_BY_PRODUCT = new Map();
 let sortKey = 'points';
 let sortDir = -1;
 function renderProducts() {
@@ -200,7 +221,10 @@ function renderProducts() {
   $('prodTable').querySelector('tbody').innerHTML = rows.map((r) => `<tr>
     <td class="left">${esc(r.product)}</td><td>${r.tests}</td><td>${r.wins || ''}</td><td>${r.second || ''}</td>
     <td>${r.third || ''}</td><td><strong>${r.points}</strong></td><td>${r.perTest.toFixed(2)}</td>
-    <td>${r.A || ''}</td><td>${r.B || ''}</td><td>${r.C || ''}</td></tr>`).join('');
+    ${SNOW.order.map((k) => {
+      const b = r.byType[k];
+      return `<td>${b ? `${b.points} <span class="muted">(${b.tests})</span>` : ''}</td>`;
+    }).join('')}</tr>`).join('');
   for (const th of $('prodTable').querySelectorAll('th')) {
     th.classList.toggle('sorted', th.dataset.sort === sortKey);
     th.dataset.dir = th.dataset.sort === sortKey ? (sortDir > 0 ? '▲' : '▼') : '';
@@ -225,8 +249,14 @@ function showTab(name) {
 async function init() {
   load();
   const res = await fetch('data.json');
-  TESTS = (await res.json()).tests;
-  STATS = productStats(TESTS);
+  const data = await res.json();
+  TESTS = data.tests;
+  SNOW = data.snowTypes;
+  STATS = productStats(TESTS).map((r) => {
+    for (const k of SNOW.order) r[`t_${k}`] = r.byType[k]?.points ?? -1;
+    return r;
+  });
+  STATS_BY_PRODUCT = new Map(STATS.map((r) => [r.product, r]));
   const first = TESTS[0].date.slice(0, 7);
   const last = TESTS[TESTS.length - 1].date.slice(0, 7);
   $('dataBadge').textContent = `${TESTS.length} tests`;
@@ -236,10 +266,12 @@ async function init() {
   bindInputs();
   for (const b of document.querySelectorAll('.tabbar button')) b.onclick = () => showTab(b.dataset.tab);
   $('testSearch').oninput = renderTests;
-  for (const b of $('classFilter').children) {
+  $('typeFilter').innerHTML = [['', 'All'], ...SNOW.order.map((k) => [k, SNOW.labels[k]])]
+    .map(([k, label]) => `<button data-type="${k}"${k ? '' : ' class="on"'}>${esc(label)}</button>`).join('');
+  for (const b of $('typeFilter').children) {
     b.onclick = () => {
-      classFilter = b.dataset.cls;
-      for (const x of $('classFilter').children) x.classList.toggle('on', x === b);
+      typeFilter = b.dataset.type;
+      for (const x of $('typeFilter').children) x.classList.toggle('on', x === b);
       renderTests();
     };
   }

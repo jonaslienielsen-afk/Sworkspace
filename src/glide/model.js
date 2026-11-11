@@ -8,6 +8,8 @@
 // when tested off the podium; a combination gives its points to every product
 // in it. Score = sum(w * points) / sum(w over all tests), i.e. expected placing
 // points on a day like this (0-3).
+// If a snow type is chosen, w is also multiplied by how alike the snow types are
+// (cond.typeSim: a row of the similarity table in data.json, e.g. new vs wet 0.1).
 
 export const SNOW_SCALE = 2;   // degrees C
 export const HUM_SCALE = 30;   // snow-humidity percentage points
@@ -30,11 +32,15 @@ export const CLASS_LABELS = {
   C: 'Wet',
 };
 
-/** Similarity weight of test t for conditions {snow, hum}; hum null ignores humidity. */
-export function weight(t, { snow, hum }) {
+/**
+ * Similarity weight of test t for conditions {snow, hum, typeSim}.
+ * hum null ignores humidity; typeSim null (snow type unknown) ignores snow type.
+ */
+export function weight(t, { snow, hum, typeSim = null }) {
   const ds = (snow - t.snow) / SNOW_SCALE;
   const dh = hum == null ? 0 : (hum - t.hum) / HUM_SCALE;
-  return Math.exp(-(ds * ds + dh * dh) / 2);
+  const type = typeSim ? (typeSim[t.snowCat] ?? 1) : 1;
+  return Math.exp(-(ds * ds + dh * dh) / 2) * type;
 }
 
 /** Each product's best result in test t: Map(product -> {points, entry}). */
@@ -114,12 +120,15 @@ export function productStats(tests) {
     for (const [product, { points }] of bestPerProduct(t)) {
       let r = rows.get(product);
       if (!r) {
-        r = { product, tests: 0, wins: 0, second: 0, third: 0, points: 0, A: 0, B: 0, C: 0 };
+        r = { product, tests: 0, wins: 0, second: 0, third: 0, points: 0, A: 0, B: 0, C: 0, byType: {} };
         rows.set(product, r);
       }
       r.tests += 1;
       r.points += points;
       r[t.cls[0]] += points;
+      const bt = (r.byType[t.snowCat] ??= { tests: 0, points: 0 });
+      bt.tests += 1;
+      bt.points += points;
       if (points === 3) r.wins += 1;
       else if (points === 2) r.second += 1;
       else if (points === 1) r.third += 1;

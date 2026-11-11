@@ -1,5 +1,58 @@
 {
  "source": "https://bullsuperski.no/glidprosjektet/",
+ "snowTypes": {
+  "order": [
+   "new",
+   "fine",
+   "new_over_old",
+   "transformed",
+   "wet"
+  ],
+  "labels": {
+   "new": "New / falling snow",
+   "fine": "Fine-grained, cold",
+   "new_over_old": "New snow on old",
+   "transformed": "Transformed / coarse",
+   "wet": "Wet / slush"
+  },
+  "sim": {
+   "new": {
+    "new": 1.0,
+    "fine": 0.6,
+    "new_over_old": 0.6,
+    "transformed": 0.2,
+    "wet": 0.1
+   },
+   "fine": {
+    "new": 0.6,
+    "fine": 1.0,
+    "new_over_old": 0.5,
+    "transformed": 0.3,
+    "wet": 0.1
+   },
+   "new_over_old": {
+    "new": 0.6,
+    "fine": 0.5,
+    "new_over_old": 1.0,
+    "transformed": 0.5,
+    "wet": 0.2
+   },
+   "transformed": {
+    "new": 0.2,
+    "fine": 0.3,
+    "new_over_old": 0.5,
+    "transformed": 1.0,
+    "wet": 0.4
+   },
+   "wet": {
+    "new": 0.1,
+    "fine": 0.1,
+    "new_over_old": 0.2,
+    "transformed": 0.4,
+    "wet": 1.0
+   }
+  }
+ },
  "tests": [
   {
    "id": "2023-12-14",
@@ -15,6 +68,7 @@
    "humMax": 22,
    "hum": 20.0,
    "snowType": "Mix of man-made and new snow",
+   "snowCat": "new",
    "weather": "Overcast",
    "cls": "A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C)",
    "podium": [
@@ -107,6 +161,7 @@
    "humMax": 22,
    "hum": 22.0,
    "snowType": "Natural snow on man-made base",
+   "snowCat": "transformed",
    "weather": "Partly cloudy",
    "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
    "podium": [
@@ -195,6 +250,7 @@
    "humMax": 15,
    "hum": 15.0,
    "snowType": "New snow (snowed 17 Jan)",
+   "snowCat": "new",
    "weather": "Sun",
    "cls": "A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C)",
    "podium": [
@@ -282,6 +338,7 @@
    "humMax": 30,
    "hum": 30.0,
    "snowType": "Transformed with some new snow",
+   "snowCat": "new_over_old",
    "weather": "Sun",
    "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
    "podium": [
@@ -375,6 +432,7 @@
    "humMax": 35,
    "hum": 30.0,
    "snowType": "New snow over transformed",
+   "snowCat": "new_over_old",
    "weather": "Snowing",
    "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
    "podium": [
@@ -463,6 +521,7 @@
    "humMax": 40,
    "hum": 36.0,
    "snowType": "Powdery layer of new snow over transformed",
+   "snowCat": "new_over_old",
    "weather": "Clear",
    "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
    "podium": [
@@ -551,6 +610,7 @@
    "humMax": 36,
    "hum": 28.0,
    "snowType": "Fresh new snow over transformed",
+   "snowCat": "new_over_old",
    "weather": "Snowing",
    "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
    "podium": [
@@ -638,6 +698,7 @@
    "humMax": 27,
    "hum": 27.0,
    "snowType": "Fresh snow over transformed",
+   "snowCat": "new_over_old",
    "weather": "Partly cloudy",
    "cls": "A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C)",
    "podium": [
@@ -730,6 +791,7 @@
    "humMax": 32,
    "hum": 26.5,
    "snowType": "Fresh snow",
+   "snowCat": "new",
    "weather": "Overcast",
    "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
    "podium": [
@@ -817,6 +879,7 @@
    "humMax": 65,
    "hum": 57.5,
    "snowType": "Coarse, wet",
+   "snowCat": "wet",
    "weather": "Rain",
    "cls": "C: Wet (>=55% humidity, snow ~0C)",
    "podium": [
@@ -905,6 +968,7 @@
    "humMax": 34,
    "hum": 34.0,
    "snowType": "Coarse, transformed",
+   "snowCat": "transformed",
    "weather": "Clear, sun",
    "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
    "podium": [
@@ -994,6 +1058,7 @@
    "humMax": 24,
    "hum": 24.0,
    "snowType": "New snow (nysnø)",
+   "snowCat": "new",
    "weather": "Clear, sun",
    "cls": "A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C)",
    "podium": [
@@ -1081,6 +1146,7 @@
    "humMax": 50,
    "hum": 44.0,
    "snowType": "Coarse, transformed (grovkornet omdannet)",
+   "snowCat": "transformed",
    "weather": "Clear",
    "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
    "podium": [
@@ -1172,6 +1238,7 @@
    "humMax": 32,
    "hum": 28.0,
    "snowType": "Coarse, transformed (refrozen)",
+   "snowCat": "transformed",
    "weather": "Fog",
    "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
    "podium": [
@@ -1261,6 +1328,7 @@
    "humMax": 38,
    "hum": 38.0,
    "snowType": "Coarse (grovkornet)",
+   "snowCat": "transformed",
    "weather": "Sun",
    "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
    "podium": [
@@ -1342,6 +1410,7 @@
    "humMax": 34,
    "hum": 34.0,
    "snowType": "Coarse (grovkornet)",
+   "snowCat": "transformed",
    "weather": "Sun",
    "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
    "podium": [
@@ -1424,6 +1493,7 @@
    "humMax": 40,
    "hum": 37.5,
    "snowType": "Coarse (grovkornet)",
+   "snowCat": "transformed",
    "weather": "Overcast",
    "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
    "podium": [
@@ -1512,6 +1582,7 @@
    "humMax": 70,
    "hum": 63.0,
    "snowType": "Coarse, wet (grov våt)",
+   "snowCat": "wet",
    "weather": "Overcast",
    "cls": "C: Wet (>=55% humidity, snow ~0C)",
    "podium": [
@@ -1600,6 +1671,7 @@
    "humMax": 68,
    "hum": 68.0,
    "snowType": "Coarse, wet, loose",
+   "snowCat": "wet",
    "weather": "",
    "cls": "C: Wet (>=55% humidity, snow ~0C)",
    "podium": [
@@ -1687,6 +1759,7 @@
    "humMax": 100,
    "hum": 95.0,
    "snowType": "Coarse, wet, dirty",
+   "snowCat": "wet",
    "weather": "Sun",
    "cls": "C: Wet (>=55% humidity, snow ~0C)",
    "podium": [
@@ -1778,6 +1851,7 @@
    "humMax": 21,
    "hum": 20.0,
    "snowType": "Fine-grained, cold (finkornet)",
+   "snowCat": "fine",
    "weather": "Clear",
    "cls": "A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C)",
    "podium": [
@@ -1865,6 +1939,7 @@
    "humMax": 25,
    "hum": 23.5,
    "snowType": "Fine-grained (finkornet)",
+   "snowCat": "fine",
    "weather": "Clear",
    "cls": "A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C)",
    "podium": [
@@ -1951,6 +2026,7 @@
    "humMax": 29,
    "hum": 27.0,
    "snowType": "New snow, medium grains",
+   "snowCat": "new",
    "weather": "Fog, snowing",
    "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
    "podium": [
@@ -2038,6 +2114,7 @@
    "humMax": 34,
    "hum": 29.5,
    "snowType": "Mixed (coarse below, fine on top)",
+   "snowCat": "new_over_old",
    "weather": "Clear, sun",
    "cls": "A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C)",
    "podium": [
@@ -2125,6 +2202,7 @@
    "humMax": 39,
    "hum": 31.0,
    "snowType": "Mixed (coarse below, finer on top)",
+   "snowCat": "new_over_old",
    "weather": "Clear, a little snow in the air",
    "cls": "A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C)",
    "podium": [
@@ -2213,6 +2291,7 @@
    "humMax": 42,
    "hum": 32.5,
    "snowType": "Fine-grained",
+   "snowCat": "fine",
    "weather": "Clear",
    "cls": "A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C)",
    "podium": [
@@ -2303,6 +2382,7 @@
    "humMax": 96,
    "hum": 83.5,
    "snowType": "Wet",
+   "snowCat": "wet",
    "weather": "Rain and fog",
    "cls": "C: Wet (>=55% humidity, snow ~0C)",
    "podium": [
@@ -2392,6 +2472,7 @@
    "humMax": 70,
    "hum": 70.0,
    "snowType": "Coarse, moist, salted tracks",
+   "snowCat": "wet",
    "weather": "Sun",
    "cls": "C: Wet (>=55% humidity, snow ~0C)",
    "podium": [
@@ -2479,6 +2560,7 @@
    "humMax": 90,
    "hum": 90.0,
    "snowType": "Coarse, moist",
+   "snowCat": "wet",
    "weather": "Sun",
    "cls": "C: Wet (>=55% humidity, snow ~0C)",
    "podium": [

@@ -28,7 +28,7 @@ import math
 from collections import defaultdict
 from itertools import product as grid
 
-from glide_data import TESTS, POINTS, components, condition_class, hum_mid, podium_places
+from glide_data import TESTS, POINTS, components, condition_class, hum_mid, podium_places, snow_type, SNOW_TYPE_SIM
 
 
 def entries(t):
@@ -107,6 +107,15 @@ def kernel(s_scale, h_scale):
     return maker
 
 
+def kernel_type(s_scale, h_scale):
+    k = kernel(s_scale, h_scale)
+    def maker(target):
+        w = k(target)
+        row = SNOW_TYPE_SIM[snow_type(target)]
+        return lambda t: w(t) * row[snow_type(t)]
+    return maker
+
+
 def same_class(target):
     c = condition_class(target)
     return lambda t: 1.0 if condition_class(t) == c else 0.0
@@ -140,7 +149,8 @@ def main():
         print(fmt("random", rb))
         print(fmt("overall form", run(overall, forward)))
         print(fmt("same condition class", run(same_class, forward)))
-        print(fmt("model 2C / 30% (default)", run(kernel(2, 30), forward)))
+        print(fmt("model 2C / 30%", run(kernel(2, 30), forward)))
+        print(fmt("model 2C / 30% + snow type", run(kernel_type(2, 30), forward)))
         rows = []
         for s, h in grid([1, 2, 3, 5, 8, 1000], [5, 8, 12, 20, 30, 1000]):
             rows.append(((s, h), run(kernel(s, h), forward)))

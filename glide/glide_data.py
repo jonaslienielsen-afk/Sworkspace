@@ -524,3 +524,65 @@ def condition_class(t):
 # Placing points: winner 3, 2nd 2, 3rd 1, tested but off the podium 0.
 # Tied products get the points of the shared place (1=, 1= -> 3 each).
 POINTS = {1: 3, 2: 2, 3: 1}
+
+
+# Snow type (grain) per test, grouped from each report's "Snø:" line:
+#   new           new / fresh / falling snow
+#   new_over_old  new snow on top of older transformed snow ("mixed")
+#   fine          fine-grained, cold old snow (finkornet)
+#   transformed   coarse / transformed, not wet (grovkornet, omdannet)
+#   wet           wet coarse snow, slush
+# 2024-01-11 ("natural snow on man-made base", +4.8 C air) is counted as transformed.
+SNOW_TYPE = {
+    "2023-12-14": "new",
+    "2024-01-18": "new",
+    "2024-02-15": "new",
+    "2025-01-09": "new",
+    "2026-01-15": "new",
+    "2024-01-25": "new_over_old",
+    "2024-01-26": "new_over_old",
+    "2024-02-01": "new_over_old",
+    "2024-02-02": "new_over_old",
+    "2024-02-08": "new_over_old",
+    "2026-01-29": "new_over_old",
+    "2026-02-05": "new_over_old",
+    "2026-01-08a": "fine",
+    "2026-01-08b": "fine",
+    "2026-02-19": "fine",
+    "2024-01-11": "transformed",
+    "2024-03-07": "transformed",
+    "2025-01-16": "transformed",
+    "2025-01-30": "transformed",
+    "2025-02-06": "transformed",
+    "2025-02-13": "transformed",
+    "2025-02-20": "transformed",
+    "2024-02-22": "wet",
+    "2025-02-25": "wet",
+    "2025-02-27": "wet",
+    "2025-03-27": "wet",
+    "2026-02-26": "wet",
+    "2026-03-19": "wet",
+    "2026-03-26": "wet",
+}
+
+SNOW_TYPES = ["new", "fine", "new_over_old", "transformed", "wet"]
+SNOW_TYPE_LABELS = {
+    "new": "New / falling snow",
+    "fine": "Fine-grained, cold",
+    "new_over_old": "New snow on old",
+    "transformed": "Transformed / coarse",
+    "wet": "Wet / slush",
+}
+
+# How much a test with snow type b counts when you are waxing for snow type a.
+SNOW_TYPE_SIM = {
+    "new":          {"new": 1.0, "fine": 0.6, "new_over_old": 0.6, "transformed": 0.2, "wet": 0.1},
+    "fine":         {"new": 0.6, "fine": 1.0, "new_over_old": 0.5, "transformed": 0.3, "wet": 0.1},
+    "new_over_old": {"new": 0.6, "fine": 0.5, "new_over_old": 1.0, "transformed": 0.5, "wet": 0.2},
+    "transformed":  {"new": 0.2, "fine": 0.3, "new_over_old": 0.5, "transformed": 1.0, "wet": 0.4},
+    "wet":          {"new": 0.1, "fine": 0.1, "new_over_old": 0.2, "transformed": 0.4, "wet": 1.0},
+}
+
+
+def snow_type(t):
+    return SNOW_TYPE[t["id"]]

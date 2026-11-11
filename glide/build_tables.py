@@ -11,7 +11,8 @@ Run: python3 build_tables.py
 import csv
 from collections import defaultdict
 
-from glide_data import TESTS, POINTS, components, condition_class, hum_mid, podium_places
+from glide_data import (TESTS, POINTS, components, condition_class, hum_mid, podium_places,
+                        snow_type, SNOW_TYPES, SNOW_TYPE_LABELS)
 
 CLASSES = sorted({condition_class(t) for t in TESTS})
 
@@ -29,7 +30,8 @@ def test_rows():
             "Snow temp estimated": "yes" if t["snow_temp_est"] else "",
             "Air humidity %": t.get("air_hum", ""),
             "Snow humidity %": f"{t['hum_min']}" if t["hum_min"] == t["hum_max"] else f"{t['hum_min']}-{t['hum_max']}",
-            "Humidity mid %": hum_mid(t), "Snow type": t["snow_type"], "Weather": t["weather"],
+            "Humidity mid %": hum_mid(t), "Snow type": t["snow_type"],
+            "Snow type group": SNOW_TYPE_LABELS[snow_type(t)], "Weather": t["weather"],
             "Condition class": condition_class(t),
         }
         pp = podium_places(t)
@@ -92,6 +94,10 @@ def product_stats():
             r[f"{c[:1]} tests"] = len(ids)
             r[f"{c[:1]} points"] = cp
             r[f"{c[:1]} wins"] = sum(1 for i in ids if res[i] == 1)
+        for st in SNOW_TYPES:
+            ids = [i for i in res if snow_type(tests_by_id[i]) == st]
+            r[f"{SNOW_TYPE_LABELS[st]} (tests/pts)"] = (
+                f"{len(ids)}/{sum(POINTS.get(res[i], 0) for i in ids)}" if ids else "")
         r["Won on"] = ", ".join(sorted(tests_by_id[i]["date"] for i, p in res.items() if p == 1))
         rows.append(r)
     rows.sort(key=lambda r: (-r["Points"], -r["Points per test"], r["Product"]))
@@ -158,7 +164,7 @@ def write_md(path, tests, stats):
              "- **Condition-class points** - points split into A cold/dry, B medium/transformed, C wet.\n",
              "Condition classes: " + "; ".join(CLASSES) + ".\n",
              "## All tests\n",
-             md_table(tests, ["Date", "Air temp C", "Air humidity %", "Snow temp C", "Snow humidity %", "Snow type", "Weather",
+             md_table(tests, ["Date", "Air temp C", "Air humidity %", "Snow temp C", "Snow humidity %", "Snow type group", "Weather",
                               "Condition class", "1. place", "2. place", "3. place", "Best feel"]),
              "\nSnow temperature for 2025-01-09 and 2025-01-16 is estimated (not in the report). "
              "The two 08.01 reports are labelled 2025 on the site but belong to January 2026. "

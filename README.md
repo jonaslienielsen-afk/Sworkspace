@@ -80,7 +80,7 @@ barcodes (the browser's built-in `BarcodeDetector` is used when available).
 
 A second app in the same site: pick a fluor-free glide wax for a day in
 Holmenkollen from Bull Superski's glide tests (29 tests, Dec 2023 – Mar 2026).
-Enter snow temperature (or air temperature) and snow humidity, and it ranks
+Enter snow temperature (or air temperature), snow humidity and snow type, and it ranks
 the gliders that did best in the most similar test conditions, with how Bull
 applied them. It also lists every test and per-product statistics, and works
 offline.

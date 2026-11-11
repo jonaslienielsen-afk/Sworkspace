@@ -60,7 +60,13 @@
           <label class="check"><input id="humUnknown" type="checkbox"> I don't know the humidity (use temperature only)</label>
         </div>
 
-        <div class="class-row">Conditions: <span id="classPill" class="pill">—</span></div>
+        <div class="field">
+          <div class="field-head">
+            <label>Snow type</label>
+            <output id="typeOut" class="type-val">Not sure</output>
+          </div>
+          <div class="chips type-chips" id="typeChips"></div>
+        </div>
       </div>
 
       <h2 class="section-title">Best gliders for these conditions</h2>
@@ -75,12 +81,7 @@
     <section id="tab-tests" class="tab" aria-labelledby="nav-tests" hidden>
       <div class="card filters">
         <input id="testSearch" type="search" placeholder="Search product, snow type, notes…" autocomplete="off">
-        <div class="chips" id="classFilter">
-          <button data-cls="" class="on">All</button>
-          <button data-cls="A">Cold / dry</button>
-          <button data-cls="B">Medium</button>
-          <button data-cls="C">Wet</button>
-        </div>
+        <div class="chips" id="typeFilter"></div>
       </div>
       <p id="testCount" class="muted small"></p>
       <div id="testList"></div>
@@ -103,15 +104,17 @@
               <th data-sort="third">3rd</th>
               <th data-sort="points">Pts</th>
               <th data-sort="perTest">Pts/test</th>
-              <th data-sort="A" title="Points in cold/dry tests">Cold</th>
-              <th data-sort="B" title="Points in medium tests">Med</th>
-              <th data-sort="C" title="Points in wet tests">Wet</th>
+              <th data-sort="t_new" title="Points (tests) on new / falling snow">New</th>
+              <th data-sort="t_fine" title="Points (tests) on fine-grained cold snow">Fine</th>
+              <th data-sort="t_new_over_old" title="Points (tests) on new snow over old">New/old</th>
+              <th data-sort="t_transformed" title="Points (tests) on transformed / coarse snow">Transf.</th>
+              <th data-sort="t_wet" title="Points (tests) on wet snow / slush">Wet</th>
             </tr>
           </thead>
           <tbody></tbody>
         </table>
       </div>
-      <p class="muted small">Points: 3 for 1st, 2 for 2nd, 1 for 3rd, 0 when tested off the podium. Tap a column to sort.</p>
+      <p class="muted small">Points: 3 for 1st, 2 for 2nd, 1 for 3rd, 0 when tested off the podium. Snow-type columns show points (number of tests). Tap a column to sort.</p>
     </section>
 
     <!-- ABOUT -->
@@ -125,6 +128,9 @@
         <h2>How the pick works</h2>
         <p>Every past test is weighted by how close its snow temperature and snow humidity were to your conditions:
           a test 2 °C or 30 humidity points away counts about 60 %, twice as far about 14 %.
+          If you pick a snow type, tests on the same snow type count fully, similar types partly
+          (e.g. new snow vs fine-grained 60 %) and very different types hardly at all (new snow vs wet 10 %).
+          Each test's snow type is grouped from the report's own description.
           Each product earns 3/2/1 points for 1st/2nd/3rd (ties share the place, combinations credit every product in them), 0 when tested but off the podium.
           The <strong>score</strong> is the weighted average points over all tests, so a product that was never tested in similar conditions scores close to 0.</p>
         <ul>
@@ -140,6 +146,9 @@
           never been on a podium before, which no model can predict.</p>
         <p>Use it to pick a shortlist, include proven all-rounders (Skigo LDQ, Toko HP Blue), and test on the day if you can.
           Snow humidity readings differ between seasons, so if you don't know it, tick "I don't know the humidity".</p>
+        <p>Adding snow type did not change the back-test score measurably (too few tests to tell), but it matches
+          experience and the data: e.g. Skigo LDQ won or was 2nd in 5 of 5 tests on transformed snow, but missed the
+          podium on new snow.</p>
       </div>
     </section>
   </main>

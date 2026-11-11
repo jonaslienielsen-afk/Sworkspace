@@ -5,7 +5,7 @@ import {
   estimateSnowTemp, conditionClass, weight, rankProducts, similarTests, productStats, bestPerProduct,
 } from '../src/glide/model.js';
 
-const { tests } = JSON.parse(readFileSync(new URL('../src/glide/data.json', import.meta.url)));
+const { tests, snowTypes } = JSON.parse(readFileSync(new URL('../src/glide/data.json', import.meta.url)));
 
 test('data has all tests with podiums', () => {
   assert.ok(tests.length >= 29);
@@ -72,4 +72,26 @@ test('productStats totals', () => {
   const ldq = s.find((r) => r.product === 'Skigo LDQ');
   assert.equal(ldq.wins, 4);
   assert.equal(s[0].product, 'Skigo LDQ');
+});
+
+test('every test has a snow type and the similarity table is complete', () => {
+  for (const t of tests) assert.ok(snowTypes.order.includes(t.snowCat), t.id);
+  for (const a of snowTypes.order) {
+    for (const b of snowTypes.order) assert.equal(typeof snowTypes.sim[a][b], 'number');
+    assert.equal(snowTypes.sim[a][a], 1);
+  }
+});
+
+test('snow type changes the pick: Skigo LDQ drops on new snow, leads on transformed', () => {
+  const base = { snow: -3, hum: 30 };
+  const onNew = rankProducts(tests, { ...base, typeSim: snowTypes.sim.new }).slice(0, 5).map((r) => r.product);
+  assert.ok(!onNew.includes('Skigo LDQ'), onNew.join());
+  const onOld = rankProducts(tests, { ...base, typeSim: snowTypes.sim.transformed });
+  assert.equal(onOld[0].product, 'Skigo LDQ');
+});
+
+test('productStats splits points by snow type', () => {
+  const ldq = productStats(tests).find((r) => r.product === 'Skigo LDQ');
+  assert.deepEqual(ldq.byType.new, { tests: 1, points: 0 });
+  assert.equal(ldq.byType.transformed.points, 13);
 });

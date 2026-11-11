@@ -14,37 +14,37 @@ Condition classes: A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3
 
 ## All tests
 
-| Date | Air temp C | Air humidity % | Snow temp C | Snow humidity % | Snow type | Weather | Condition class | 1. place | 2. place | 3. place | Best feel |
+| Date | Air temp C | Air humidity % | Snow temp C | Snow humidity % | Snow type group | Weather | Condition class | 1. place | 2. place | 3. place | Best feel |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 2023-12-14 | -5 | 96 | -5 | 18-22 | Mix of man-made and new snow | Overcast | A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C) | Skigo FFR Blue liquid | Holmenkol Syntec FF1 Red | Star Next Med = Swix TSP6 (tie) | Skigo FFR Blue liquid |
-| 2024-01-11 | 4.8 | 57 | -1 | 22 | Natural snow on man-made base | Partly cloudy | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | Skigo LDQ | Rode RXL Warm liquid | Holmenkol Syntec FF1 Red |  |
-| 2024-01-18 | -7.2 | 68 | -7 | 15 | New snow (snowed 17 Jan) | Sun | A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C) | Skigo FFR Blue | Toko HP Blue | Swix TSP5 |  |
-| 2024-01-25 | 1 | 74 | -2 | 30 | Transformed with some new snow | Sun | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | Toko HP Yellow = Vauhti LDR New Snow liquid (tie) |  | Skigo FFR Red liquid = Swix TS10 liquid (tie) |  |
-| 2024-01-26 | -1 | 99 | -1 | 25-35 | New snow over transformed | Snowing | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | Skigo FFR Red | Swix TSP7 = Rode Endurance + Rode RXL Warm liquid (tie) |  |  |
-| 2024-02-01 | 1 | 99 | -0.5 | 32-40 | Powdery layer of new snow over transformed | Clear | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | Rex NF11 liquid | Maplus BP1 Hot | Skigo FFR Yellow |  |
-| 2024-02-02 | 0 | 99 | -3 | 20-36 | Fresh new snow over transformed | Snowing | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | Toko HP Yellow liquid | Swix TS10 liquid = Rex G41 liquid (tie) |  |  |
-| 2024-02-08 | -11 | 92 | -10 | 27 | Fresh snow over transformed | Partly cloudy | A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C) | Toko HP Blue | Skigo LDQ | Skigo FFR Green = Swix TSP5 (tie) |  |
-| 2024-02-15 | -1 | 99 | -1 | 21-32 | Fresh snow | Overcast | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | Swix White Marathon | Vauhti GW Polar liquid | (no base layer) |  |
-| 2024-02-22 | 2 | 99 | 0 | 50-65 | Coarse, wet | Rain | C: Wet (>=55% humidity, snow ~0C) | Swix TSP10 + Swix HS10 liquid | Toko HP Yellow liquid = Rex NFX11 (tie) |  |  |
-| 2024-03-07 | 2 | 69 | 0 | 34 | Coarse, transformed | Clear, sun | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | Rex G41 liquid | Rex NF41 liquid | Toko Jet Yellow + Toko Jet Yellow liquid | Rex G41 liquid |
-| 2025-01-09 | -3 |  | -4 | 24 | New snow (nysnø) | Clear, sun | A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C) | HWK UHX Red | Toko HP Red | Star Next Med | HWK UHX Red |
-| 2025-01-16 | 4 |  | 0 | 38-50 | Coarse, transformed (grovkornet omdannet) | Clear | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | HWK UHX Warm powder + HWK UHX Warm liquid | Skigo LDQ | Swix TSP10 + Toko Jet Warm liquid | HWK UHX Warm powder + HWK UHX Warm liquid |
-| 2025-01-30 | -1.5 |  | -1 | 24-32 | Coarse, transformed (refrozen) | Fog | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | Skigo LDQ | Swix White Marathon + Swix TS6 liquid | Swix PS6 |  |
-| 2025-02-06 | 2 |  | -2 | 38 | Coarse (grovkornet) | Sun | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | HWK UHX Red | Rex Sisu White | Toko HP Red |  |
-| 2025-02-13 | 0 |  | -4 | 34 | Coarse (grovkornet) | Sun | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | Skigo LDQ | Star Next Med | HWK UHX Red |  |
-| 2025-02-20 | -4 |  | -3.5 | 35-40 | Coarse (grovkornet) | Overcast | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | Star Next Med liquid | Skigo LDQ | Star Next Med liquid (ironed 120C) |  |
-| 2025-02-25 | 2 |  | 0 | 56-70 | Coarse, wet (grov våt) | Overcast | C: Wet (>=55% humidity, snow ~0C) | Skigo GRP + Skigo FFC Yellow | Rex Sisu White | Rode Endurance |  |
-| 2025-02-27 | 2 |  | -1 | 68 | Coarse, wet, loose |  | C: Wet (>=55% humidity, snow ~0C) | Skigo LDQ | Rex NFX11 | Toko HP Yellow |  |
-| 2025-03-27 | 8 |  | 0 | 90-100 | Coarse, wet, dirty | Sun | C: Wet (>=55% humidity, snow ~0C) | Skigo GRP | Swix PC100 | Skigo LDQ |  |
-| 2026-01-08 | -11 |  | -6 | 19-21 | Fine-grained, cold (finkornet) | Clear | A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C) | Toko HP Blue | Rex NFX21G | Toko Jet Cold | Toko HP Blue |
-| 2026-01-08 | -8 |  | -4.5 | 22-25 | Fine-grained (finkornet) | Clear | A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C) | Toko HP Blue + Rode RW20 | Swix PS6 + Toko HP Blue | Toko HP Blue |  |
-| 2026-01-15 | -2 |  | -2 | 25-29 | New snow, medium grains | Fog, snowing | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | Swix PF35 | Vola NSD2325 | Toko Jet Mid liquid | Toko Jet Mid liquid |
-| 2026-01-29 | -11 |  | -10 | 25-34 | Mixed (coarse below, fine on top) | Clear, sun | A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C) | Toko HP Blue | Red Creek Old Fashion Green | Star Next Cold | Star Next Cold |
-| 2026-02-05 | -10 |  | -8 | 23-39 | Mixed (coarse below, finer on top) | Clear, a little snow in the air | A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C) | Swix PM Molybdenum | Vauhti Race Pink | Toko Jet Mid | Toko Jet Mid |
-| 2026-02-19 | -8 |  | -11 | 23-42 | Fine-grained | Clear | A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C) | Skigo Booster Cold + Vola NSD2319 | Swix PS6 | Swix PS6 + Rode RW20 | Skigo Booster Cold + Vola NSD2319 |
-| 2026-02-26 | 1 |  | -2 | 71-96 | Wet | Rain and fog | C: Wet (>=55% humidity, snow ~0C) | Skigo FFR Yellow | Skigo FFR Yellow + Skigo CM26 | Star Next Dark Wet | Skigo FFR Yellow |
-| 2026-03-19 | 6 |  | 0 | 70 | Coarse, moist, salted tracks | Sun | C: Wet (>=55% humidity, snow ~0C) | Toko Prototype liquid | Rode RW50 | Toko Jet Warm liquid | Toko Prototype liquid |
-| 2026-03-26 | 8 |  | 0 | 90 | Coarse, moist | Sun | C: Wet (>=55% humidity, snow ~0C) | Toko Prototype liquid + Skigo FFR Yellow + Toko Prototype liquid | Skigo FFC Yellow + Skigo FFR Yellow | Toko Prototype liquid (x2) | Toko Prototype liquid + Skigo FFR Yellow + Toko Prototype liquid |
+| 2023-12-14 | -5 | 96 | -5 | 18-22 | New / falling snow | Overcast | A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C) | Skigo FFR Blue liquid | Holmenkol Syntec FF1 Red | Star Next Med = Swix TSP6 (tie) | Skigo FFR Blue liquid |
+| 2024-01-11 | 4.8 | 57 | -1 | 22 | Transformed / coarse | Partly cloudy | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | Skigo LDQ | Rode RXL Warm liquid | Holmenkol Syntec FF1 Red |  |
+| 2024-01-18 | -7.2 | 68 | -7 | 15 | New / falling snow | Sun | A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C) | Skigo FFR Blue | Toko HP Blue | Swix TSP5 |  |
+| 2024-01-25 | 1 | 74 | -2 | 30 | New snow on old | Sun | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | Toko HP Yellow = Vauhti LDR New Snow liquid (tie) |  | Skigo FFR Red liquid = Swix TS10 liquid (tie) |  |
+| 2024-01-26 | -1 | 99 | -1 | 25-35 | New snow on old | Snowing | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | Skigo FFR Red | Swix TSP7 = Rode Endurance + Rode RXL Warm liquid (tie) |  |  |
+| 2024-02-01 | 1 | 99 | -0.5 | 32-40 | New snow on old | Clear | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | Rex NF11 liquid | Maplus BP1 Hot | Skigo FFR Yellow |  |
+| 2024-02-02 | 0 | 99 | -3 | 20-36 | New snow on old | Snowing | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | Toko HP Yellow liquid | Swix TS10 liquid = Rex G41 liquid (tie) |  |  |
+| 2024-02-08 | -11 | 92 | -10 | 27 | New snow on old | Partly cloudy | A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C) | Toko HP Blue | Skigo LDQ | Skigo FFR Green = Swix TSP5 (tie) |  |
+| 2024-02-15 | -1 | 99 | -1 | 21-32 | New / falling snow | Overcast | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | Swix White Marathon | Vauhti GW Polar liquid | (no base layer) |  |
+| 2024-02-22 | 2 | 99 | 0 | 50-65 | Wet / slush | Rain | C: Wet (>=55% humidity, snow ~0C) | Swix TSP10 + Swix HS10 liquid | Toko HP Yellow liquid = Rex NFX11 (tie) |  |  |
+| 2024-03-07 | 2 | 69 | 0 | 34 | Transformed / coarse | Clear, sun | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | Rex G41 liquid | Rex NF41 liquid | Toko Jet Yellow + Toko Jet Yellow liquid | Rex G41 liquid |
+| 2025-01-09 | -3 |  | -4 | 24 | New / falling snow | Clear, sun | A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C) | HWK UHX Red | Toko HP Red | Star Next Med | HWK UHX Red |
+| 2025-01-16 | 4 |  | 0 | 38-50 | Transformed / coarse | Clear | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | HWK UHX Warm powder + HWK UHX Warm liquid | Skigo LDQ | Swix TSP10 + Toko Jet Warm liquid | HWK UHX Warm powder + HWK UHX Warm liquid |
+| 2025-01-30 | -1.5 |  | -1 | 24-32 | Transformed / coarse | Fog | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | Skigo LDQ | Swix White Marathon + Swix TS6 liquid | Swix PS6 |  |
+| 2025-02-06 | 2 |  | -2 | 38 | Transformed / coarse | Sun | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | HWK UHX Red | Rex Sisu White | Toko HP Red |  |
+| 2025-02-13 | 0 |  | -4 | 34 | Transformed / coarse | Sun | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | Skigo LDQ | Star Next Med | HWK UHX Red |  |
+| 2025-02-20 | -4 |  | -3.5 | 35-40 | Transformed / coarse | Overcast | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | Star Next Med liquid | Skigo LDQ | Star Next Med liquid (ironed 120C) |  |
+| 2025-02-25 | 2 |  | 0 | 56-70 | Wet / slush | Overcast | C: Wet (>=55% humidity, snow ~0C) | Skigo GRP + Skigo FFC Yellow | Rex Sisu White | Rode Endurance |  |
+| 2025-02-27 | 2 |  | -1 | 68 | Wet / slush |  | C: Wet (>=55% humidity, snow ~0C) | Skigo LDQ | Rex NFX11 | Toko HP Yellow |  |
+| 2025-03-27 | 8 |  | 0 | 90-100 | Wet / slush | Sun | C: Wet (>=55% humidity, snow ~0C) | Skigo GRP | Swix PC100 | Skigo LDQ |  |
+| 2026-01-08 | -11 |  | -6 | 19-21 | Fine-grained, cold | Clear | A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C) | Toko HP Blue | Rex NFX21G | Toko Jet Cold | Toko HP Blue |
+| 2026-01-08 | -8 |  | -4.5 | 22-25 | Fine-grained, cold | Clear | A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C) | Toko HP Blue + Rode RW20 | Swix PS6 + Toko HP Blue | Toko HP Blue |  |
+| 2026-01-15 | -2 |  | -2 | 25-29 | New / falling snow | Fog, snowing | B: Medium / transformed (<55% humidity, snow -4.5 to 0C) | Swix PF35 | Vola NSD2325 | Toko Jet Mid liquid | Toko Jet Mid liquid |
+| 2026-01-29 | -11 |  | -10 | 25-34 | New snow on old | Clear, sun | A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C) | Toko HP Blue | Red Creek Old Fashion Green | Star Next Cold | Star Next Cold |
+| 2026-02-05 | -10 |  | -8 | 23-39 | New snow on old | Clear, a little snow in the air | A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C) | Swix PM Molybdenum | Vauhti Race Pink | Toko Jet Mid | Toko Jet Mid |
+| 2026-02-19 | -8 |  | -11 | 23-42 | Fine-grained, cold | Clear | A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C) | Skigo Booster Cold + Vola NSD2319 | Swix PS6 | Swix PS6 + Rode RW20 | Skigo Booster Cold + Vola NSD2319 |
+| 2026-02-26 | 1 |  | -2 | 71-96 | Wet / slush | Rain and fog | C: Wet (>=55% humidity, snow ~0C) | Skigo FFR Yellow | Skigo FFR Yellow + Skigo CM26 | Star Next Dark Wet | Skigo FFR Yellow |
+| 2026-03-19 | 6 |  | 0 | 70 | Wet / slush | Sun | C: Wet (>=55% humidity, snow ~0C) | Toko Prototype liquid | Rode RW50 | Toko Jet Warm liquid | Toko Prototype liquid |
+| 2026-03-26 | 8 |  | 0 | 90 | Wet / slush | Sun | C: Wet (>=55% humidity, snow ~0C) | Toko Prototype liquid + Skigo FFR Yellow + Toko Prototype liquid | Skigo FFC Yellow + Skigo FFR Yellow | Toko Prototype liquid (x2) | Toko Prototype liquid + Skigo FFR Yellow + Toko Prototype liquid |
 
 Snow temperature for 2025-01-09 and 2025-01-16 is estimated (not in the report). The two 08.01 reports are labelled 2025 on the site but belong to January 2026. Air humidity is only reported for 2023/24. 2024-01-26 exists in two versions with different placings; the later upload is used (see notes).
 
