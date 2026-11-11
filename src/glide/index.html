@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b3d5c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Glide Picker</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="../icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../icon-192.png">
+  <link rel="stylesheet" href="glide.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Glide Picker</h1>
+    <span id="dataBadge" class="badge">Loading…</span>
+  </header>
+
+  <main>
+    <!-- PICK -->
+    <section id="tab-pick" class="tab active" aria-labelledby="nav-pick">
+      <div class="card conditions">
+        <div class="seg" role="radiogroup" aria-label="Temperature you know">
+          <button id="modeSnow" role="radio" aria-checked="true" class="on">Snow temp</button>
+          <button id="modeAir" role="radio" aria-checked="false">Air temp only</button>
+        </div>
+
+        <div class="field">
+          <div class="field-head">
+            <label for="temp" id="tempLabel">Snow temperature</label>
+            <output id="tempOut" class="big-val">-3 °C</output>
+          </div>
+          <div class="stepper">
+            <button class="step" data-target="temp" data-step="-0.5" aria-label="Colder">−</button>
+            <input id="temp" type="range" min="-15" max="0" step="0.5" value="-3">
+            <button class="step" data-target="temp" data-step="0.5" aria-label="Warmer">+</button>
+          </div>
+          <p id="tempHint" class="hint" hidden></p>
+        </div>
+
+        <div class="field">
+          <div class="field-head">
+            <label for="hum">Snow humidity (snøfukt)</label>
+            <output id="humOut" class="big-val">35 %</output>
+          </div>
+          <div class="stepper">
+            <button class="step" data-target="hum" data-step="-5" aria-label="Drier">−</button>
+            <input id="hum" type="range" min="10" max="100" step="1" value="35">
+            <button class="step" data-target="hum" data-step="5" aria-label="Wetter">+</button>
+          </div>
+          <div class="chips" id="humChips">
+            <button data-hum="20">Cold, dry ~20</button>
+            <button data-hum="35">Normal ~35</button>
+            <button data-hum="55">Moist ~55</button>
+            <button data-hum="75">Wet ~75</button>
+            <button data-hum="92">Slush ~90</button>
+          </div>
+          <label class="check"><input id="humUnknown" type="checkbox"> I don't know the humidity (use temperature only)</label>
+        </div>
+
+        <div class="class-row">Conditions: <span id="classPill" class="pill">—</span></div>
+      </div>
+
+      <h2 class="section-title">Best gliders for these conditions</h2>
+      <p class="caveat">Score = expected placing points (3 = always wins) in Bull's tests on similar days. In back-testing the real winner was in the top 3 about half the time, so <strong>test 3–4 of these</strong> rather than trusting #1 blindly. Tap a glider to see how Bull applied it.</p>
+      <ol id="results" class="results"></ol>
+
+      <h2 class="section-title">Most similar test days</h2>
+      <div id="similar"></div>
+    </section>
+
+    <!-- TESTS -->
+    <section id="tab-tests" class="tab" aria-labelledby="nav-tests" hidden>
+      <div class="card filters">
+        <input id="testSearch" type="search" placeholder="Search product, snow type, notes…" autocomplete="off">
+        <div class="chips" id="classFilter">
+          <button data-cls="" class="on">All</button>
+          <button data-cls="A">Cold / dry</button>
+          <button data-cls="B">Medium</button>
+          <button data-cls="C">Wet</button>
+        </div>
+      </div>
+      <p id="testCount" class="muted small"></p>
+      <div id="testList"></div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="tab-products" class="tab" aria-labelledby="nav-products" hidden>
+      <div class="card filters">
+        <input id="prodSearch" type="search" placeholder="Search product…" autocomplete="off">
+        <label class="check"><input id="prodPodiumOnly" type="checkbox" checked> Only products with a podium</label>
+      </div>
+      <div class="table-wrap">
+        <table id="prodTable">
+          <thead>
+            <tr>
+              <th data-sort="product" class="left">Product</th>
+              <th data-sort="tests">Tests</th>
+              <th data-sort="wins">Wins</th>
+              <th data-sort="second">2nd</th>
+              <th data-sort="third">3rd</th>
+              <th data-sort="points">Pts</th>
+              <th data-sort="perTest">Pts/test</th>
+              <th data-sort="A" title="Points in cold/dry tests">Cold</th>
+              <th data-sort="B" title="Points in medium tests">Med</th>
+              <th data-sort="C" title="Points in wet tests">Wet</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="muted small">Points: 3 for 1st, 2 for 2nd, 1 for 3rd, 0 when tested off the podium. Tap a column to sort.</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="tab-about" class="tab" aria-labelledby="nav-about" hidden>
+      <div class="card prose">
+        <h2>Where the data comes from</h2>
+        <p id="aboutData">Bull Superski's fluor-free glide tests in Holmenkollen
+          (<a href="https://bullsuperski.no/glidprosjektet/" target="_blank" rel="noopener">bullsuperski.no/glidprosjektet</a>),
+          transcribed from the report images. Each report ranks the top 3 of about 8 pairs of skis and lists the rest unranked.</p>
+
+        <h2>How the pick works</h2>
+        <p>Every past test is weighted by how close its snow temperature and snow humidity were to your conditions:
+          a test 2 °C or 30 humidity points away counts about 60 %, twice as far about 14 %.
+          Each product earns 3/2/1 points for 1st/2nd/3rd (ties share the place, combinations credit every product in them), 0 when tested but off the podium.
+          The <strong>score</strong> is the weighted average points over all tests, so a product that was never tested in similar conditions scores close to 0.</p>
+        <ul>
+          <li><strong>Podium</strong>: share of the similar tests it was in where it finished top 3.</li>
+          <li><strong>Evidence</strong>: how many similar tests it took part in (strong / some / thin).</li>
+          <li><strong>How Bull applied it</strong>: method from its best result in the most similar conditions.</li>
+        </ul>
+
+        <h2>How reliable is it?</h2>
+        <p>Checked by hiding each test and predicting it from the others. The real winner was in the top 3 about
+          <strong>50 %</strong> of the time (random guessing: 38 %), and the #1 pick won about 20–30 % of the time (random: 13 %).
+          Simply picking the product with the best overall record does about as well — in about half the tests the winner had
+          never been on a podium before, which no model can predict.</p>
+        <p>Use it to pick a shortlist, include proven all-rounders (Skigo LDQ, Toko HP Blue), and test on the day if you can.
+          Snow humidity readings differ between seasons, so if you don't know it, tick "I don't know the humidity".</p>
+      </div>
+    </section>
+  </main>
+
+  <nav class="tabbar" role="tablist">
+    <button id="nav-pick" role="tab" data-tab="pick" aria-selected="true" class="active">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 14h6l-1 8 9-13h-6l1-7z"/></svg>Pick
+    </button>
+    <button id="nav-tests" role="tab" data-tab="tests" aria-selected="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v2H4zm0 6h16v2H4zm0 6h10v2H4z"/></svg>Tests
+    </button>
+    <button id="nav-products" role="tab" data-tab="products" aria-selected="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V10h3v10zm5 0V4h3v16zm5 0v-7h3v7z"/></svg>Products
+    </button>
+    <button id="nav-about" role="tab" data-tab="about" aria-selected="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/></svg>About
+    </button>
+  </nav>
+
+  <script type="module" src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) navigator.serviceWorker.register('../sw.js').catch(() => {});
+  </script>
+</body>
+</html>

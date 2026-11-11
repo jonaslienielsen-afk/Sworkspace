@@ -4,9 +4,9 @@ glide tests (glide_data.py).
 Method (nearest-neighbour weighting):
   1. Each past test gets a similarity weight from how close its snow
      temperature and snow humidity are to the forecast day:
-         d = sqrt(((snow - snow_i) / 3)^2 + ((hum - hum_i) / 12)^2)
+         d = sqrt(((snow - snow_i) / 2)^2 + ((hum - hum_i) / 30)^2)
          w = exp(-d^2 / 2)
-     So a test 3 C or 12 humidity points away counts ~60%, twice that ~14%.
+     So a test 2 C or 30 humidity points away counts ~60%, twice that ~14%.
   2. In each test a product scores 3 (1st), 2 (2nd), 1 (3rd), 0 (tested, not on
      the podium); tied products share the place's points. A combination gives
      its points to each product in it.
@@ -26,8 +26,8 @@ from collections import defaultdict
 
 from glide_data import TESTS, POINTS, components, hum_mid, podium_places
 
-SNOW_SCALE = 3.0   # degrees C
-HUM_SCALE = 12.0   # humidity percentage points
+SNOW_SCALE = 2.0   # degrees C (best in validate.py, both leave-one-out and forward)
+HUM_SCALE = 30.0   # humidity percentage points (readings vary between seasons)
 
 
 def weights(snow, hum):

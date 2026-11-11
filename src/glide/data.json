@@ -1,0 +1,2552 @@
+{
+ "source": "https://bullsuperski.no/glidprosjektet/",
+ "tests": [
+  {
+   "id": "2023-12-14",
+   "date": "2023-12-14",
+   "season": "2023/24",
+   "title": "Fluorfritest 14. desember",
+   "kind": "Topcoat (Swix BPL base on all)",
+   "air": -5,
+   "airHum": 96,
+   "snow": -5,
+   "snowEst": false,
+   "humMin": 18,
+   "humMax": 22,
+   "hum": 20.0,
+   "snowType": "Mix of man-made and new snow",
+   "weather": "Overcast",
+   "cls": "A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Skigo FFR Blue liquid",
+     "type": "Liquid",
+     "apply": "Sponge on bottle, dry 30 min, rotor fleece",
+     "remove": "Fine steel by hand (2-3 light strokes), rotor nylon",
+     "points": 3,
+     "products": [
+      "Skigo FFR Blue liquid"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Holmenkol Syntec FF1 Red",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair and steel",
+     "points": 2,
+     "products": [
+      "Holmenkol Syntec FF1 Red"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Star Next Med",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair and steel",
+     "points": 1,
+     "products": [
+      "Star Next Med"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Swix TSP6",
+     "type": "Powder",
+     "apply": "Iron 180C",
+     "remove": "Rotor horsehair and steel",
+     "points": 1,
+     "products": [
+      "Swix TSP6"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Toko HP Red",
+     "products": [
+      "Toko HP Red"
+     ]
+    },
+    {
+     "name": "Skigo FFR Red",
+     "products": [
+      "Skigo FFR Red"
+     ]
+    },
+    {
+     "name": "Maplus GM Boost Med",
+     "products": [
+      "Maplus GM Boost Med"
+     ]
+    },
+    {
+     "name": "Vauhti LDR New Snow liquid",
+     "products": [
+      "Vauhti LDR New Snow liquid"
+     ]
+    }
+   ],
+   "bestFeel": "Skigo FFR Blue liquid",
+   "distance": "Same gap between 1st and 2nd after 7 km",
+   "notes": "Even between the top four. Surprising that a liquid won; it was also best on feel. The other liquid in the test did not reach the top."
+  },
+  {
+   "id": "2024-01-11",
+   "date": "2024-01-11",
+   "season": "2023/24",
+   "title": "Fluorfritest 11. januar",
+   "kind": "Topcoat (Swix BPL base on all)",
+   "air": 4.8,
+   "airHum": 57,
+   "snow": -1,
+   "snowEst": false,
+   "humMin": 22,
+   "humMax": 22,
+   "hum": 22.0,
+   "snowType": "Natural snow on man-made base",
+   "weather": "Partly cloudy",
+   "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Skigo LDQ",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair and steel",
+     "points": 3,
+     "products": [
+      "Skigo LDQ"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Rode RXL Warm liquid",
+     "type": "Liquid",
+     "apply": "Felt block + rotor fleece",
+     "remove": "Fine steel + rotor nylon",
+     "points": 2,
+     "products": [
+      "Rode RXL Warm liquid"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Holmenkol Syntec FF1 Red",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair and steel",
+     "points": 1,
+     "products": [
+      "Holmenkol Syntec FF1 Red"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Toko HP Yellow glider",
+     "products": [
+      "Toko HP Yellow glider"
+     ]
+    },
+    {
+     "name": "Vauhti Old Snow Warm liquid",
+     "products": [
+      "Vauhti Old Snow Warm liquid"
+     ]
+    },
+    {
+     "name": "Maplus Base Gel + Maplus Boost liquid",
+     "products": [
+      "Maplus Base Gel",
+      "Maplus Boost liquid"
+     ]
+    },
+    {
+     "name": "Red Creek FF Lilla",
+     "products": [
+      "Red Creek FF Lilla"
+     ]
+    },
+    {
+     "name": "Star Next Med",
+     "products": [
+      "Star Next Med"
+     ]
+    }
+   ],
+   "bestFeel": "",
+   "distance": "Finalists retested after 5 km: the winner only increased its margin",
+   "notes": "Clear winner. Tendency that powder/glider applied with high heat beat those applied with low heat."
+  },
+  {
+   "id": "2024-01-18",
+   "date": "2024-01-18",
+   "season": "2023/24",
+   "title": "Fluorfritest 18. januar",
+   "kind": "Topcoat (Swix PS6 base on all)",
+   "air": -7.2,
+   "airHum": 68,
+   "snow": -7,
+   "snowEst": false,
+   "humMin": 15,
+   "humMax": 15,
+   "hum": 15.0,
+   "snowType": "New snow (snowed 17 Jan)",
+   "weather": "Sun",
+   "cls": "A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Skigo FFR Blue",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair and steel",
+     "points": 3,
+     "products": [
+      "Skigo FFR Blue"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Toko HP Blue",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair and steel",
+     "points": 2,
+     "products": [
+      "Toko HP Blue"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Swix TSP5",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair and steel",
+     "points": 1,
+     "products": [
+      "Swix TSP5"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Swix TSP5 (ironed 160C)",
+     "products": [
+      "Swix TSP5"
+     ]
+    },
+    {
+     "name": "Vauhti Race Cold New Snow glider",
+     "products": [
+      "Vauhti Race Cold New Snow glider"
+     ]
+    },
+    {
+     "name": "Red Creek FF Lilla",
+     "products": [
+      "Red Creek FF Lilla"
+     ]
+    },
+    {
+     "name": "Rode R20",
+     "products": [
+      "Rode R20"
+     ]
+    },
+    {
+     "name": "Rex NF21G liquid",
+     "products": [
+      "Rex NF21G liquid"
+     ]
+    }
+   ],
+   "bestFeel": "",
+   "distance": "",
+   "notes": "Even between the top two, bigger gaps below. Rode R20 a good cheaper alternative. Skis zeroed before the test."
+  },
+  {
+   "id": "2024-01-25",
+   "date": "2024-01-25",
+   "season": "2023/24",
+   "title": "Fluorfritest 25. januar",
+   "kind": "Topcoat (Swix PS6 base on all)",
+   "air": 1,
+   "airHum": 74,
+   "snow": -2,
+   "snowEst": false,
+   "humMin": 30,
+   "humMax": 30,
+   "hum": 30.0,
+   "snowType": "Transformed with some new snow",
+   "weather": "Sun",
+   "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Toko HP Yellow",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair and steel",
+     "points": 3,
+     "products": [
+      "Toko HP Yellow"
+     ]
+    },
+    {
+     "place": 1,
+     "name": "Vauhti LDR New Snow liquid",
+     "type": "Liquid",
+     "apply": "Sponge on bottle, rotor felt",
+     "remove": "Fine steel, blue nylon",
+     "points": 3,
+     "products": [
+      "Vauhti LDR New Snow liquid"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Skigo FFR Red liquid",
+     "type": "Liquid",
+     "apply": "Sponge on bottle, rotor felt",
+     "remove": "Fine steel, blue nylon",
+     "points": 1,
+     "products": [
+      "Skigo FFR Red liquid"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Swix TS10 liquid",
+     "type": "Liquid",
+     "apply": "Felt pad, rotor felt",
+     "remove": "Fine steel, blue nylon",
+     "points": 1,
+     "products": [
+      "Swix TS10 liquid"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Maplus GM Hot",
+     "products": [
+      "Maplus GM Hot"
+     ]
+    },
+    {
+     "name": "Maplus GM Hot + Maplus Boost Hot liquid",
+     "products": [
+      "Maplus GM Hot",
+      "Maplus Boost Hot liquid"
+     ]
+    },
+    {
+     "name": "Rex NF11 liquid",
+     "products": [
+      "Rex NF11 liquid"
+     ]
+    },
+    {
+     "name": "Maplus BP1 Hot",
+     "products": [
+      "Maplus BP1 Hot"
+     ]
+    }
+   ],
+   "bestFeel": "",
+   "distance": "",
+   "notes": "Very even, very little between the top four. Maplus BP1 Hot not far behind as a cheaper alternative. Skis zeroed before the test."
+  },
+  {
+   "id": "2024-01-26",
+   "date": "2024-01-26",
+   "season": "2023/24",
+   "title": "Fluorfritest 26. januar",
+   "kind": "Topcoat (Swix PS6 base on all)",
+   "air": -1,
+   "airHum": 99,
+   "snow": -1,
+   "snowEst": false,
+   "humMin": 25,
+   "humMax": 35,
+   "hum": 30.0,
+   "snowType": "New snow over transformed",
+   "weather": "Snowing",
+   "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Skigo FFR Red",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair and steel",
+     "points": 3,
+     "products": [
+      "Skigo FFR Red"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Swix TSP7",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair and steel",
+     "points": 2,
+     "products": [
+      "Swix TSP7"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Rode Endurance + Rode RXL Warm liquid",
+     "type": "Glider + liquid",
+     "apply": "Iron 155C, felt pad + felt rotor",
+     "remove": "Rotor horsehair and steel + fine steel, blue nylon",
+     "points": 2,
+     "products": [
+      "Rode Endurance",
+      "Rode RXL Warm liquid"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Vauhti LDR New Snow liquid",
+     "products": [
+      "Vauhti LDR New Snow liquid"
+     ]
+    },
+    {
+     "name": "Swix White Marathon",
+     "products": [
+      "Swix White Marathon"
+     ]
+    },
+    {
+     "name": "Swix TS10 liquid",
+     "products": [
+      "Swix TS10 liquid"
+     ]
+    },
+    {
+     "name": "Toko HP Yellow",
+     "products": [
+      "Toko HP Yellow"
+     ]
+    },
+    {
+     "name": "Toko HP glider",
+     "products": [
+      "Toko HP glider"
+     ]
+    }
+   ],
+   "bestFeel": "",
+   "distance": "",
+   "notes": "Three products stood out, bigger gaps below. NB: the site has two versions of this report; an earlier one had Swix TSP7 and Rode Endurance + RXL Warm tied 1st and Skigo FFR Red 3rd. The later upload is used here."
+  },
+  {
+   "id": "2024-02-01",
+   "date": "2024-02-01",
+   "season": "2023/24",
+   "title": "Fluorfritest 1. februar",
+   "kind": "Topcoat (Swix BPL base on all)",
+   "air": 1,
+   "airHum": 99,
+   "snow": -0.5,
+   "snowEst": false,
+   "humMin": 32,
+   "humMax": 40,
+   "hum": 36.0,
+   "snowType": "Powdery layer of new snow over transformed",
+   "weather": "Clear",
+   "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Rex NF11 liquid",
+     "type": "Liquid",
+     "apply": "Felt block, cure 20 min, rotor felt",
+     "remove": "Fine steel by hand + blue nylon rotor",
+     "points": 3,
+     "products": [
+      "Rex NF11 liquid"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Maplus BP1 Hot",
+     "type": "Liquid",
+     "apply": "Felt block + rotor felt after drying",
+     "remove": "Fine steel by hand + nylon rotor",
+     "points": 2,
+     "products": [
+      "Maplus BP1 Hot"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Skigo FFR Yellow",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair + fine steel + nylon",
+     "points": 1,
+     "products": [
+      "Skigo FFR Yellow"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Vauhti LDR Old Snow",
+     "products": [
+      "Vauhti LDR Old Snow"
+     ]
+    },
+    {
+     "name": "Swix TS10 liquid",
+     "products": [
+      "Swix TS10 liquid"
+     ]
+    },
+    {
+     "name": "Toko HP Yellow",
+     "products": [
+      "Toko HP Yellow"
+     ]
+    },
+    {
+     "name": "Star Next Warm liquid",
+     "products": [
+      "Star Next Warm liquid"
+     ]
+    },
+    {
+     "name": "Swix White Marathon + Swix TST8 block",
+     "products": [
+      "Swix White Marathon",
+      "Swix TST8 block"
+     ]
+    }
+   ],
+   "bestFeel": "",
+   "distance": "",
+   "notes": "Two good options at the top. Skigo FFR Yellow (3rd) is more durable, a good choice for long races. Skis zeroed before the test."
+  },
+  {
+   "id": "2024-02-02",
+   "date": "2024-02-02",
+   "season": "2023/24",
+   "title": "Fluorfritest 2. februar",
+   "kind": "Topcoat (Swix BPL base on all)",
+   "air": 0,
+   "airHum": 99,
+   "snow": -3,
+   "snowEst": false,
+   "humMin": 20,
+   "humMax": 36,
+   "hum": 28.0,
+   "snowType": "Fresh new snow over transformed",
+   "weather": "Snowing",
+   "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Toko HP Yellow liquid",
+     "type": "Liquid",
+     "apply": "Felt block, cure 20 min, rotor felt",
+     "remove": "Fine steel by hand + blue nylon rotor",
+     "points": 3,
+     "products": [
+      "Toko HP Yellow liquid"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Swix TS10 liquid",
+     "type": "Liquid",
+     "apply": "Felt block + rotor felt after drying",
+     "remove": "Nylon rotor",
+     "points": 2,
+     "products": [
+      "Swix TS10 liquid"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Rex G41 liquid",
+     "type": "Liquid",
+     "apply": "Felt block + rotor felt after drying",
+     "remove": "Fine steel by hand + nylon rotor",
+     "points": 2,
+     "products": [
+      "Rex G41 liquid"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Maplus BP1 Hot",
+     "products": [
+      "Maplus BP1 Hot"
+     ]
+    },
+    {
+     "name": "Swix White Marathon",
+     "products": [
+      "Swix White Marathon"
+     ]
+    },
+    {
+     "name": "Skigo FFR Yellow",
+     "products": [
+      "Skigo FFR Yellow"
+     ]
+    },
+    {
+     "name": "Rex NF11 liquid",
+     "products": [
+      "Rex NF11 liquid"
+     ]
+    },
+    {
+     "name": "Maplus BP1 Hot (with wool)",
+     "products": [
+      "Maplus BP1 Hot"
+     ]
+    }
+   ],
+   "bestFeel": "",
+   "distance": "",
+   "notes": "Very even top 3. The two yellow products could gain in warmer/wetter snow; the Rex option tolerates icier/sharper snow. Swix White Marathon was 4th and works well as a base for the liquids."
+  },
+  {
+   "id": "2024-02-08",
+   "date": "2024-02-08",
+   "season": "2023/24",
+   "title": "Fluorfritest 8. februar",
+   "kind": "Topcoat (Swix PS5 base on all)",
+   "air": -11,
+   "airHum": 92,
+   "snow": -10,
+   "snowEst": false,
+   "humMin": 27,
+   "humMax": 27,
+   "hum": 27.0,
+   "snowType": "Fresh snow over transformed",
+   "weather": "Partly cloudy",
+   "cls": "A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Toko HP Blue",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair / steel / horsehair, blue nylon",
+     "points": 3,
+     "products": [
+      "Toko HP Blue"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Skigo LDQ",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair and steel",
+     "points": 2,
+     "products": [
+      "Skigo LDQ"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Skigo FFR Green",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair and steel",
+     "points": 1,
+     "products": [
+      "Skigo FFR Green"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Swix TSP5",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair and steel",
+     "points": 1,
+     "products": [
+      "Swix TSP5"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Swix White Marathon",
+     "products": [
+      "Swix White Marathon"
+     ]
+    },
+    {
+     "name": "Skigo FFR Blue",
+     "products": [
+      "Skigo FFR Blue"
+     ]
+    },
+    {
+     "name": "Star Next Cold",
+     "products": [
+      "Star Next Cold"
+     ]
+    },
+    {
+     "name": "Vauhti Polar",
+     "products": [
+      "Vauhti Polar"
+     ]
+    }
+   ],
+   "bestFeel": "",
+   "distance": "",
+   "notes": "Even test."
+  },
+  {
+   "id": "2024-02-15",
+   "date": "2024-02-15",
+   "season": "2023/24",
+   "title": "Fluorfritest 15. februar",
+   "kind": "Base layer (topcoat Swix TSP7 on all, over Swix BPL)",
+   "air": -1,
+   "airHum": 99,
+   "snow": -1,
+   "snowEst": false,
+   "humMin": 21,
+   "humMax": 32,
+   "hum": 26.5,
+   "snowType": "Fresh snow",
+   "weather": "Overcast",
+   "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Swix White Marathon",
+     "type": "Base powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair and steel",
+     "points": 3,
+     "products": [
+      "Swix White Marathon"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Vauhti GW Polar liquid",
+     "type": "Base liquid",
+     "apply": "From bottle + rotor felt",
+     "remove": "Fine steel and blue nylon",
+     "points": 2,
+     "products": [
+      "Vauhti GW Polar liquid"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "(no base layer)",
+     "type": "-",
+     "apply": "-",
+     "remove": "-",
+     "points": 1,
+     "products": [
+      "(no base layer)"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Swix HS5",
+     "products": [
+      "Swix HS5"
+     ]
+    },
+    {
+     "name": "Swix PS6",
+     "products": [
+      "Swix PS6"
+     ]
+    },
+    {
+     "name": "Rode Endurance",
+     "products": [
+      "Rode Endurance"
+     ]
+    },
+    {
+     "name": "Vauhti GW Polar",
+     "products": [
+      "Vauhti GW Polar"
+     ]
+    },
+    {
+     "name": "Swix White Marathon block",
+     "products": [
+      "Swix White Marathon block"
+     ]
+    }
+   ],
+   "bestFeel": "",
+   "distance": "1st and 2nd retested after 8 km: Swix White Marathon an even clearer winner",
+   "notes": "Base-glider test for speed and wear, relevant for long races. Fairly large gaps further down. Placings are for the base layer; Swix TSP7 was the topcoat on every ski."
+  },
+  {
+   "id": "2024-02-22",
+   "date": "2024-02-22",
+   "season": "2023/24",
+   "title": "Fluorfritest 22. februar",
+   "kind": "Topcoat, powder vs liquid (Swix BPL base on all)",
+   "air": 2,
+   "airHum": 99,
+   "snow": 0,
+   "snowEst": false,
+   "humMin": 50,
+   "humMax": 65,
+   "hum": 57.5,
+   "snowType": "Coarse, wet",
+   "weather": "Rain",
+   "cls": "C: Wet (>=55% humidity, snow ~0C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Swix TSP10 + Swix HS10 liquid",
+     "type": "Powder + liquid",
+     "apply": "Iron 200C; liquid with felt block, cure 20 min, rotor fleece",
+     "remove": "Rotor horsehair/steel on powder; fine steel and rotor nylon on liquid",
+     "points": 3,
+     "products": [
+      "Swix TSP10",
+      "Swix HS10 liquid"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Toko HP Yellow liquid",
+     "type": "Liquid",
+     "apply": "Felt pad, rotor fleece",
+     "remove": "Fine steel and rotor nylon",
+     "points": 2,
+     "products": [
+      "Toko HP Yellow liquid"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Rex NFX11",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair and steel",
+     "points": 2,
+     "products": [
+      "Rex NFX11"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Toko HP Yellow",
+     "products": [
+      "Toko HP Yellow"
+     ]
+    },
+    {
+     "name": "Rex Sisu White",
+     "products": [
+      "Rex Sisu White"
+     ]
+    },
+    {
+     "name": "Skigo FFR Yellow",
+     "products": [
+      "Skigo FFR Yellow"
+     ]
+    },
+    {
+     "name": "Skigo N3",
+     "products": [
+      "Skigo N3"
+     ]
+    },
+    {
+     "name": "Vauhti Race Warm Old Snow liquid",
+     "products": [
+      "Vauhti Race Warm Old Snow liquid"
+     ]
+    }
+   ],
+   "bestFeel": "",
+   "distance": "Rex NFX11 vs Toko HP Yellow liquid after 6 and 12 km: the powder held up somewhat better",
+   "notes": "Powder and liquid test in rain. Surprisingly close at the top, bigger gaps below. Best pure liquid and best pure powder were equal, just behind the powder + liquid winner. Rex NFX11 the better choice for a long race in these conditions."
+  },
+  {
+   "id": "2024-03-07",
+   "date": "2024-03-07",
+   "season": "2023/24",
+   "title": "Fluorfritest 7. mars",
+   "kind": "Topcoat (Swix BPL base on all)",
+   "air": 2,
+   "airHum": 69,
+   "snow": 0,
+   "snowEst": false,
+   "humMin": 34,
+   "humMax": 34,
+   "hum": 34.0,
+   "snowType": "Coarse, transformed",
+   "weather": "Clear, sun",
+   "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Rex G41 liquid",
+     "type": "Liquid",
+     "apply": "Sponge on bottle, cure 6 h, rotor felt",
+     "remove": "Fine steel + rotor horsehair + rotor blue nylon",
+     "points": 3,
+     "products": [
+      "Rex G41 liquid"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Rex NF41 liquid",
+     "type": "Liquid",
+     "apply": "Felt block + rotor felt",
+     "remove": "Fine steel + rotor horsehair + rotor blue nylon",
+     "points": 2,
+     "products": [
+      "Rex NF41 liquid"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Toko Jet Yellow + Toko Jet Yellow liquid",
+     "type": "Powder + liquid",
+     "apply": "Iron 180C + 2 layers of spray",
+     "remove": "Rotor horsehair, steel, nylon; liquid: nylon",
+     "points": 1,
+     "products": [
+      "Toko Jet Yellow",
+      "Toko Jet Yellow liquid"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Toko HP Yellow",
+     "products": [
+      "Toko HP Yellow"
+     ]
+    },
+    {
+     "name": "Toko Jet Yellow",
+     "products": [
+      "Toko Jet Yellow"
+     ]
+    },
+    {
+     "name": "Star Dark Warm",
+     "products": [
+      "Star Dark Warm"
+     ]
+    },
+    {
+     "name": "Toko Jet Yellow liquid + Toko Jet Yellow",
+     "products": [
+      "Toko Jet Yellow liquid",
+      "Toko Jet Yellow"
+     ]
+    },
+    {
+     "name": "Toko Jet Red",
+     "products": [
+      "Toko Jet Red"
+     ]
+    }
+   ],
+   "bestFeel": "Rex G41 liquid",
+   "distance": "1st and 3rd retested after 10 km: the powder version gained a little, not enough; it was slightly better on drier, sun-dried parts of the track",
+   "notes": "New Toko products with different methods, plus new Rex and Star products; Rex G41 as reference. Rex G41 a clear winner, also best on feel (good release). Curing 6 h improved durability."
+  },
+  {
+   "id": "2025-01-09",
+   "date": "2025-01-09",
+   "season": "2024/25",
+   "title": "Fluorfritest 9. januar",
+   "kind": "Topcoat",
+   "air": -3,
+   "airHum": null,
+   "snow": -4,
+   "snowEst": true,
+   "humMin": 24,
+   "humMax": 24,
+   "hum": 24.0,
+   "snowType": "New snow (nysnø)",
+   "weather": "Clear, sun",
+   "cls": "A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "HWK UHX Red",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Steel + rotor horsehair + rotor blue nylon",
+     "points": 3,
+     "products": [
+      "HWK UHX Red"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Toko HP Red",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Steel + rotor horsehair + rotor blue nylon",
+     "points": 2,
+     "products": [
+      "Toko HP Red"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Star Next Med",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Fine steel + rotor horsehair + rotor blue nylon",
+     "points": 1,
+     "products": [
+      "Star Next Med"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Toko Jet Red",
+     "products": [
+      "Toko Jet Red"
+     ]
+    },
+    {
+     "name": "Skigo LDQ",
+     "products": [
+      "Skigo LDQ"
+     ]
+    },
+    {
+     "name": "Rex Sisu Black",
+     "products": [
+      "Rex Sisu Black"
+     ]
+    },
+    {
+     "name": "Swix PS6",
+     "products": [
+      "Swix PS6"
+     ]
+    },
+    {
+     "name": "Swix TSP6",
+     "products": [
+      "Swix TSP6"
+     ]
+    }
+   ],
+   "bestFeel": "HWK UHX Red",
+   "distance": "",
+   "notes": "All skis had Swix TSP6 as base for the topcoat test. Close at the top, HWK Red slightly better on speed and feel. Base-layer test (8 options): Swix PS6 (200C) or Swix White Marathon block stood out."
+  },
+  {
+   "id": "2025-01-16",
+   "date": "2025-01-16",
+   "season": "2024/25",
+   "title": "Fluorfritest 16. januar",
+   "kind": "Topcoat",
+   "air": 4,
+   "airHum": null,
+   "snow": 0,
+   "snowEst": true,
+   "humMin": 38,
+   "humMax": 50,
+   "hum": 44.0,
+   "snowType": "Coarse, transformed (grovkornet omdannet)",
+   "weather": "Clear",
+   "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "HWK UHX Warm powder + HWK UHX Warm liquid",
+     "type": "Powder + liquid",
+     "apply": "Iron 200C / spray, spread with felt, cure 60 min",
+     "remove": "Rotor horsehair / fine steel / nylon + rotor nylon",
+     "points": 3,
+     "products": [
+      "HWK UHX Warm"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Skigo LDQ",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair / fine steel / rotor nylon",
+     "points": 2,
+     "products": [
+      "Skigo LDQ"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Swix TSP10 + Toko Jet Warm liquid",
+     "type": "Powder + liquid",
+     "apply": "Iron 200C / spray directly on ski, cure 60 min",
+     "remove": "Horsehair / steel / nylon + no brushing",
+     "points": 1,
+     "products": [
+      "Swix TSP10",
+      "Toko Jet Warm liquid"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Swix TSP10 + Swix TS10",
+     "products": [
+      "Swix TSP10",
+      "Swix TS10 liquid"
+     ]
+    },
+    {
+     "name": "Skigo GRP + Skigo LDQ",
+     "products": [
+      "Skigo GRP",
+      "Skigo LDQ"
+     ]
+    },
+    {
+     "name": "Rex NFX41",
+     "products": [
+      "Rex NFX41"
+     ]
+    },
+    {
+     "name": "Swix PS6 + Rex G41 liquid",
+     "products": [
+      "Swix PS6",
+      "Rex G41 liquid"
+     ]
+    },
+    {
+     "name": "Swix PS6",
+     "products": [
+      "Swix PS6"
+     ]
+    }
+   ],
+   "bestFeel": "HWK UHX Warm powder + HWK UHX Warm liquid",
+   "distance": "",
+   "notes": "Snow humidity 38% before, 50% after the test. Even between top 3, clear advantage on slip/feel with liquid topping. LDQ without GRP base best at first, but after 6 km the GRP-base pair recovered half the gap."
+  },
+  {
+   "id": "2025-01-30",
+   "date": "2025-01-30",
+   "season": "2024/25",
+   "title": "Fluorfritest 30. januar",
+   "kind": "Topcoat",
+   "air": -1.5,
+   "airHum": null,
+   "snow": -1,
+   "snowEst": false,
+   "humMin": 24,
+   "humMax": 32,
+   "hum": 28.0,
+   "snowType": "Coarse, transformed (refrozen)",
+   "weather": "Fog",
+   "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Skigo LDQ",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair / rotor steel / rotor nylon",
+     "points": 3,
+     "products": [
+      "Skigo LDQ"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Swix White Marathon + Swix TS6 liquid",
+     "type": "Powder + spray",
+     "apply": "Iron 200C + spray with felt",
+     "remove": "Rotor horsehair / steel / nylon + fleece/blue nylon",
+     "points": 2,
+     "products": [
+      "Swix White Marathon",
+      "Swix TS6 liquid"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Swix PS6",
+     "type": "Glider",
+     "apply": "Swix Wax Machine + iron 200C",
+     "remove": "Rotor horsehair / steel / nylon",
+     "points": 1,
+     "products": [
+      "Swix PS6"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Swix PS6 (other method)",
+     "products": [
+      "Swix PS6"
+     ]
+    },
+    {
+     "name": "Vauhti LDR Old Snow",
+     "products": [
+      "Vauhti LDR Old Snow"
+     ]
+    },
+    {
+     "name": "Skigo LDQ + Toko Jet Med liquid",
+     "products": [
+      "Skigo LDQ",
+      "Toko Jet Med liquid"
+     ]
+    },
+    {
+     "name": "Swix TSB8",
+     "products": [
+      "Swix TSB8"
+     ]
+    },
+    {
+     "name": "HWK UHX Red",
+     "products": [
+      "HWK UHX Red"
+     ]
+    }
+   ],
+   "bestFeel": "",
+   "distance": "",
+   "notes": "Frozen overnight after rain/mild days. Top 2 even, bigger gaps further down. 5 km distance test LDQ vs Marathon+TS6: result held. Considered relevant for Ungdommens Holmenkollrenn."
+  },
+  {
+   "id": "2025-02-06",
+   "date": "2025-02-06",
+   "season": "2024/25",
+   "title": "Fluorfritest 6. februar",
+   "kind": "Topcoat",
+   "air": 2,
+   "airHum": null,
+   "snow": -2,
+   "snowEst": false,
+   "humMin": 38,
+   "humMax": 38,
+   "hum": 38.0,
+   "snowType": "Coarse (grovkornet)",
+   "weather": "Sun",
+   "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "HWK UHX Red",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Steel hand / rotor horsehair / rotor steel / rotor nylon",
+     "points": 3,
+     "products": [
+      "HWK UHX Red"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Rex Sisu White",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Steel hand / rotor horsehair / rotor steel / rotor nylon",
+     "points": 2,
+     "products": [
+      "Rex Sisu White"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Toko HP Red",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Steel hand / rotor horsehair / rotor steel / rotor nylon",
+     "points": 1,
+     "products": [
+      "Toko HP Red"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Swix PS6",
+     "products": [
+      "Swix PS6"
+     ]
+    },
+    {
+     "name": "Swix PM-25",
+     "products": [
+      "Swix PM-25"
+     ]
+    },
+    {
+     "name": "Star Next Med",
+     "products": [
+      "Star Next Med"
+     ]
+    },
+    {
+     "name": "Star Next Warm powder + spray",
+     "products": [
+      "Star Next Warm"
+     ]
+    }
+   ],
+   "bestFeel": "",
+   "distance": "",
+   "notes": "Cold night, rising temperature during the day. Powder with spray on top was somewhat behind today."
+  },
+  {
+   "id": "2025-02-13",
+   "date": "2025-02-13",
+   "season": "2024/25",
+   "title": "Fluorfritest 13. februar",
+   "kind": "Topcoat",
+   "air": 0,
+   "airHum": null,
+   "snow": -4,
+   "snowEst": false,
+   "humMin": 34,
+   "humMax": 34,
+   "hum": 34.0,
+   "snowType": "Coarse (grovkornet)",
+   "weather": "Sun",
+   "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Skigo LDQ",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Steel hand / rotor horsehair / rotor steel / rotor nylon",
+     "points": 3,
+     "products": [
+      "Skigo LDQ"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Star Next Med",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Steel hand / rotor horsehair / rotor steel / rotor nylon",
+     "points": 2,
+     "products": [
+      "Star Next Med"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "HWK UHX Red",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Steel hand / rotor horsehair / rotor steel / rotor nylon",
+     "points": 1,
+     "products": [
+      "HWK UHX Red"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Star Dark Next Med",
+     "products": [
+      "Star Dark Next Med"
+     ]
+    },
+    {
+     "name": "Rode RX22",
+     "products": [
+      "Rode RX22"
+     ]
+    },
+    {
+     "name": "Red Creek Blue glider",
+     "products": [
+      "Red Creek Blue glider"
+     ]
+    },
+    {
+     "name": "Rode RX22 + Rode RXL Cold liquid",
+     "products": [
+      "Rode RX22",
+      "Rode RXL Cold liquid"
+     ]
+    }
+   ],
+   "bestFeel": "",
+   "distance": "",
+   "notes": "A few minus degrees overnight, near 0 in the morning. Very little separated LDQ and Star Next Med. 'LDQ as usual at the top on this snow.'"
+  },
+  {
+   "id": "2025-02-20",
+   "date": "2025-02-20",
+   "season": "2024/25",
+   "title": "Fluorfritest 20. februar",
+   "kind": "Topcoat (liquids, LDQ as reference)",
+   "air": -4,
+   "airHum": null,
+   "snow": -3.5,
+   "snowEst": false,
+   "humMin": 35,
+   "humMax": 40,
+   "hum": 37.5,
+   "snowType": "Coarse (grovkornet)",
+   "weather": "Overcast",
+   "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Star Next Med liquid",
+     "type": "Liquid",
+     "apply": "Felt applicator x2",
+     "remove": "Fine steel hand / rotor blue nylon",
+     "points": 3,
+     "products": [
+      "Star Next Med liquid"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Skigo LDQ",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Steel hand / rotor horsehair / rotor steel / rotor nylon",
+     "points": 2,
+     "products": [
+      "Skigo LDQ"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Star Next Med liquid (ironed 120C)",
+     "type": "Liquid",
+     "apply": "Felt + iron 120C",
+     "remove": "Fine steel / rotor nylon",
+     "points": 1,
+     "products": [
+      "Star Next Med liquid"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Red Creek -3/-20 liquid",
+     "products": [
+      "Red Creek -3/-20 liquid"
+     ]
+    },
+    {
+     "name": "Vauhti Cold Old Snow",
+     "products": [
+      "Vauhti Cold Old Snow"
+     ]
+    },
+    {
+     "name": "Rode RX32 + Rode RXL Med liquid",
+     "products": [
+      "Rode RX32",
+      "Rode RXL Med liquid"
+     ]
+    },
+    {
+     "name": "Toko HP Blue",
+     "products": [
+      "Toko HP Blue"
+     ]
+    },
+    {
+     "name": "Toko Jet Blue",
+     "products": [
+      "Toko Jet Blue"
+     ]
+    }
+   ],
+   "bestFeel": "",
+   "distance": "",
+   "notes": "Down to -7 overnight, high air humidity. Tested how cold-snow products tolerate moister/milder snow (relevant for long races with changing conditions)."
+  },
+  {
+   "id": "2025-02-25",
+   "date": "2025-02-25",
+   "season": "2024/25",
+   "title": "Underlagstest 25.2.2025",
+   "kind": "Base layer (topcoat Swix White Marathon powder on all)",
+   "air": 2,
+   "airHum": null,
+   "snow": 0,
+   "snowEst": false,
+   "humMin": 56,
+   "humMax": 70,
+   "hum": 63.0,
+   "snowType": "Coarse, wet (grov våt)",
+   "weather": "Overcast",
+   "cls": "C: Wet (>=55% humidity, snow ~0C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Skigo GRP + Skigo FFC Yellow",
+     "type": "Liquid + glider",
+     "apply": "Felt + iron 200C",
+     "remove": "Rotor horsehair/steel + steel hand, rotor horsehair/steel",
+     "points": 3,
+     "products": [
+      "Skigo GRP",
+      "Skigo FFC Yellow"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Rex Sisu White",
+     "type": "Glider",
+     "apply": "Iron 200C",
+     "remove": "Steel hand / rotor horsehair / rotor steel / rotor nylon",
+     "points": 2,
+     "products": [
+      "Rex Sisu White"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Rode Endurance",
+     "type": "Glider",
+     "apply": "Iron 200C",
+     "remove": "Steel hand / rotor horsehair / rotor steel",
+     "points": 1,
+     "products": [
+      "Rode Endurance"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Skigo FFC Yellow",
+     "products": [
+      "Skigo FFC Yellow"
+     ]
+    },
+    {
+     "name": "Swix White Marathon",
+     "products": [
+      "Swix White Marathon"
+     ]
+    },
+    {
+     "name": "Washed ski (Toko racing wax remover)",
+     "products": [
+      "(washed ski, no wax)"
+     ]
+    },
+    {
+     "name": "Star Durable Long Distance Dark",
+     "products": [
+      "Star Durable Long Distance Dark"
+     ]
+    },
+    {
+     "name": "Swix PS6",
+     "products": [
+      "Swix PS6"
+     ]
+    }
+   ],
+   "bestFeel": "",
+   "distance": "5 km retest: 1. Swix PS6, 2. Skigo GRP + Skigo FFC Yellow (GRP lost a lot after 5 km)",
+   "notes": "Base-layer test ahead of Holmenkollmarsjen and Vasaloppet. GRP gave a big lift but faded badly after 5 km, so not recommended for distance. Theory: GRP was the key, a different glider on top would hold up better."
+  },
+  {
+   "id": "2025-02-27",
+   "date": "2025-02-27",
+   "season": "2024/25",
+   "title": "Topprodukt 27. februar",
+   "kind": "Topcoat",
+   "air": 2,
+   "airHum": null,
+   "snow": -1,
+   "snowEst": false,
+   "humMin": 68,
+   "humMax": 68,
+   "hum": 68.0,
+   "snowType": "Coarse, wet, loose",
+   "weather": "",
+   "cls": "C: Wet (>=55% humidity, snow ~0C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Skigo LDQ",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Steel hand / rotor horsehair / rotor steel / rotor nylon",
+     "points": 3,
+     "products": [
+      "Skigo LDQ"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Rex NFX11",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Steel hand / rotor horsehair / rotor steel / rotor nylon",
+     "points": 2,
+     "products": [
+      "Rex NFX11"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Toko HP Yellow",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Steel hand / rotor horsehair / rotor steel / rotor nylon",
+     "points": 1,
+     "products": [
+      "Toko HP Yellow"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Star Dark Warm",
+     "products": [
+      "Star Dark Warm"
+     ]
+    },
+    {
+     "name": "Swix White Marathon",
+     "products": [
+      "Swix White Marathon"
+     ]
+    },
+    {
+     "name": "HWK UHX Warm",
+     "products": [
+      "HWK UHX Warm"
+     ]
+    },
+    {
+     "name": "HWK UHX Middle",
+     "products": [
+      "HWK UHX Middle"
+     ]
+    },
+    {
+     "name": "Swix PS6",
+     "products": [
+      "Swix PS6"
+     ]
+    }
+   ],
+   "bestFeel": "",
+   "distance": "",
+   "notes": "Topcoat test ahead of Holmenkollmarsjen. LDQ named the safe choice; expected to be at least as good on firmer/drier tracks."
+  },
+  {
+   "id": "2025-03-27",
+   "date": "2025-03-27",
+   "season": "2024/25",
+   "title": "Glidtest 27.3.2025 (Holmenkollen)",
+   "kind": "Topcoat (liquid vs powder)",
+   "air": 8,
+   "airHum": null,
+   "snow": 0,
+   "snowEst": false,
+   "humMin": 90,
+   "humMax": 100,
+   "hum": 95.0,
+   "snowType": "Coarse, wet, dirty",
+   "weather": "Sun",
+   "cls": "C: Wet (>=55% humidity, snow ~0C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Skigo GRP",
+     "type": "Liquid",
+     "apply": "Sponge applicator, dry 15 min",
+     "remove": "Fine steel hand + rotor horsehair + rotor nylon",
+     "points": 3,
+     "products": [
+      "Skigo GRP"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Swix PC100",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor steel/horsehair, fine steel hand + rotor nylon",
+     "points": 2,
+     "products": [
+      "Swix PC100"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Skigo LDQ",
+     "type": "Liquid",
+     "apply": "Iron 200C",
+     "remove": "Rotor steel/horsehair, fine steel hand + rotor nylon",
+     "points": 1,
+     "products": [
+      "Skigo LDQ"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Skigo FFR Yellow",
+     "products": [
+      "Skigo FFR Yellow"
+     ]
+    },
+    {
+     "name": "Skigo LDQ/FFR Yellow 50/50",
+     "products": [
+      "Skigo LDQ",
+      "Skigo FFR Yellow"
+     ]
+    },
+    {
+     "name": "Block Y + HWK FFL34",
+     "products": [
+      "Block Y",
+      "HWK FFL34 liquid"
+     ]
+    },
+    {
+     "name": "Rode RW50 + HWK FFL34",
+     "products": [
+      "Rode RW50",
+      "HWK FFL34 liquid"
+     ]
+    },
+    {
+     "name": "Skigo LDQ + Skigo FFR Yellow liquid",
+     "products": [
+      "Skigo LDQ",
+      "Skigo FFR Yellow liquid"
+     ]
+    }
+   ],
+   "bestFeel": "",
+   "distance": "Top 2 retested after 10 km: same result (equal durability)",
+   "notes": "Wet, dirty snow in Holmenkollen. Fairly clear winner, closer further down. All skis had Swix Pro Cleaner as base."
+  },
+  {
+   "id": "2026-01-08a",
+   "date": "2026-01-08",
+   "season": "2025/26",
+   "title": "Fluorfritest 08. januar (powder)",
+   "kind": "Topcoat (powders, same method)",
+   "air": -11,
+   "airHum": null,
+   "snow": -6,
+   "snowEst": false,
+   "humMin": 19,
+   "humMax": 21,
+   "hum": 20.0,
+   "snowType": "Fine-grained, cold (finkornet)",
+   "weather": "Clear",
+   "cls": "A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Toko HP Blue",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair / rotor steel / rotor nylon",
+     "points": 3,
+     "products": [
+      "Toko HP Blue"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Rex NFX21G",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair / rotor steel / rotor nylon",
+     "points": 2,
+     "products": [
+      "Rex NFX21G"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Toko Jet Cold",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair / rotor steel / rotor nylon",
+     "points": 1,
+     "products": [
+      "Toko Jet Cold"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Swix PF25",
+     "products": [
+      "Swix PF25"
+     ]
+    },
+    {
+     "name": "Optiwax test powder",
+     "products": [
+      "Optiwax test powder"
+     ]
+    },
+    {
+     "name": "HWK test powder",
+     "products": [
+      "HWK test powder"
+     ]
+    },
+    {
+     "name": "Star Next Cold",
+     "products": [
+      "Star Next Cold"
+     ]
+    },
+    {
+     "name": "Toko Jet White",
+     "products": [
+      "Toko Jet White"
+     ]
+    }
+   ],
+   "bestFeel": "Toko HP Blue",
+   "distance": "",
+   "notes": "HP Blue and Rex 21G almost equal on glide; HP Blue best feel and best overall. Toko Jet Cold slightly behind but competitive. In hindsight Star Next Cold should have been ironed at 180C."
+  },
+  {
+   "id": "2026-01-08b",
+   "date": "2026-01-08",
+   "season": "2025/26",
+   "title": "Fluorfritest 08. januar del 2 (method)",
+   "kind": "Method / combinations on Toko HP Blue",
+   "air": -8,
+   "airHum": null,
+   "snow": -4.5,
+   "snowEst": false,
+   "humMin": 22,
+   "humMax": 25,
+   "hum": 23.5,
+   "snowType": "Fine-grained (finkornet)",
+   "weather": "Clear",
+   "cls": "A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Toko HP Blue + Rode RW20",
+     "type": "Powder + block",
+     "apply": "Iron 200C + wool",
+     "remove": "Rotor horsehair / steel / nylon + wool",
+     "points": 3,
+     "products": [
+      "Toko HP Blue",
+      "Rode RW20"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Swix PS6 + Toko HP Blue",
+     "type": "Glider + powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair / steel / nylon",
+     "points": 2,
+     "products": [
+      "Swix PS6",
+      "Toko HP Blue"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Toko HP Blue",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair / steel / nylon",
+     "points": 1,
+     "products": [
+      "Toko HP Blue"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Toko SJX + Toko HP Blue",
+     "products": [
+      "Toko SJX",
+      "Toko HP Blue"
+     ]
+    },
+    {
+     "name": "Toko HP Blue + Swix test product",
+     "products": [
+      "Toko HP Blue"
+     ]
+    },
+    {
+     "name": "Toko HP Blue + Toko Jet White",
+     "products": [
+      "Toko HP Blue",
+      "Toko Jet White"
+     ]
+    },
+    {
+     "name": "Toko HP Blue + Toko Jet Mid",
+     "products": [
+      "Toko HP Blue",
+      "Toko Jet Mid"
+     ]
+    }
+   ],
+   "bestFeel": "",
+   "distance": "",
+   "notes": "PS6 base at 200C lifts plain HP Blue by 20 cm; Rode RW20 wool on top lifts HP Blue by 40 cm. Recommendation: Swix PS6 + Toko HP Blue + Rode RW20."
+  },
+  {
+   "id": "2026-01-15",
+   "date": "2026-01-15",
+   "season": "2025/26",
+   "title": "Fluorfritest 15. januar",
+   "kind": "Topcoat (Swix PS6 base on all)",
+   "air": -2,
+   "airHum": null,
+   "snow": -2,
+   "snowEst": false,
+   "humMin": 25,
+   "humMax": 29,
+   "hum": 27.0,
+   "snowType": "New snow, medium grains",
+   "weather": "Fog, snowing",
+   "cls": "B: Medium / transformed (<55% humidity, snow -4.5 to 0C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Swix PF35",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair / rotor steel / rotor nylon",
+     "points": 3,
+     "products": [
+      "Swix PF35"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Vola NSD2325",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair / rotor steel / rotor nylon",
+     "points": 2,
+     "products": [
+      "Vola NSD2325"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Toko Jet Mid liquid",
+     "type": "Liquid",
+     "apply": "Spray, dry 20 min",
+     "remove": "No brushing",
+     "points": 1,
+     "products": [
+      "Toko Jet Mid liquid"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Swix PS6",
+     "products": [
+      "Swix PS6"
+     ]
+    },
+    {
+     "name": "Toko Jet White",
+     "products": [
+      "Toko Jet White"
+     ]
+    },
+    {
+     "name": "Optiwax KM50",
+     "products": [
+      "Optiwax KM50"
+     ]
+    },
+    {
+     "name": "Swix PC35",
+     "products": [
+      "Swix PC35"
+     ]
+    },
+    {
+     "name": "Toko HP Red",
+     "products": [
+      "Toko HP Red"
+     ]
+    }
+   ],
+   "bestFeel": "Toko Jet Mid liquid",
+   "distance": "",
+   "notes": "Toko Jet Mid liquid best on feel; it lifted plain Swix PS6 by 40 cm, could likely lift PF35 too."
+  },
+  {
+   "id": "2026-01-29",
+   "date": "2026-01-29",
+   "season": "2025/26",
+   "title": "Fluorfritest 29. januar",
+   "kind": "Topcoat",
+   "air": -11,
+   "airHum": null,
+   "snow": -10,
+   "snowEst": false,
+   "humMin": 25,
+   "humMax": 34,
+   "hum": 29.5,
+   "snowType": "Mixed (coarse below, fine on top)",
+   "weather": "Clear, sun",
+   "cls": "A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Toko HP Blue",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair / rotor steel / rotor nylon",
+     "points": 3,
+     "products": [
+      "Toko HP Blue"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Red Creek Old Fashion Green",
+     "type": "Glider",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair / rotor steel / rotor nylon",
+     "points": 2,
+     "products": [
+      "Red Creek Old Fashion Green"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Star Next Cold",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair / rotor steel / rotor nylon",
+     "points": 1,
+     "products": [
+      "Star Next Cold"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Rode RX22",
+     "products": [
+      "Rode RX22"
+     ]
+    },
+    {
+     "name": "Swix White Marathon",
+     "products": [
+      "Swix White Marathon"
+     ]
+    },
+    {
+     "name": "Skigo FFR Blue",
+     "products": [
+      "Skigo FFR Blue"
+     ]
+    },
+    {
+     "name": "Swix PF35",
+     "products": [
+      "Swix PF35"
+     ]
+    },
+    {
+     "name": "Toko HP Red",
+     "products": [
+      "Toko HP Red"
+     ]
+    }
+   ],
+   "bestFeel": "Star Next Cold",
+   "distance": "",
+   "notes": "Star Next Cold just behind on pure glide but clearly best on feel. Relevant for Kvalfosssprinten (skate) where feel matters a lot."
+  },
+  {
+   "id": "2026-02-05",
+   "date": "2026-02-05",
+   "season": "2025/26",
+   "title": "Fluorfritest 5. februar",
+   "kind": "Topcoat",
+   "air": -10,
+   "airHum": null,
+   "snow": -8,
+   "snowEst": false,
+   "humMin": 23,
+   "humMax": 39,
+   "hum": 31.0,
+   "snowType": "Mixed (coarse below, finer on top)",
+   "weather": "Clear, a little snow in the air",
+   "cls": "A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Swix PM Molybdenum",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair / rotor steel / rotor nylon",
+     "points": 3,
+     "products": [
+      "Swix PM Molybdenum"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Vauhti Race Pink",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair / rotor steel / rotor nylon",
+     "points": 2,
+     "products": [
+      "Vauhti Race Pink"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Toko Jet Mid",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair / rotor steel / rotor nylon",
+     "points": 1,
+     "products": [
+      "Toko Jet Mid"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Skigo Booster Cold + Toko HP Blue",
+     "products": [
+      "Skigo Booster Cold",
+      "Toko HP Blue"
+     ]
+    },
+    {
+     "name": "Toko HP Blue",
+     "products": [
+      "Toko HP Blue"
+     ]
+    },
+    {
+     "name": "Skigo LDQ",
+     "products": [
+      "Skigo LDQ"
+     ]
+    },
+    {
+     "name": "Rex Sisu White",
+     "products": [
+      "Rex Sisu White"
+     ]
+    },
+    {
+     "name": "Star Next Med",
+     "products": [
+      "Star Next Med"
+     ]
+    }
+   ],
+   "bestFeel": "Toko Jet Mid",
+   "distance": "",
+   "notes": "39% humidity in the track, 23% on the new snow on top. Toko Jet Mid slightly behind on glide, best on feel. Skigo Booster under powder gave a lift. Liquid on top did not lift."
+  },
+  {
+   "id": "2026-02-19",
+   "date": "2026-02-19",
+   "season": "2025/26",
+   "title": "Fluorfritest 19. februar",
+   "kind": "Base + topcoat combinations",
+   "air": -8,
+   "airHum": null,
+   "snow": -11,
+   "snowEst": false,
+   "humMin": 23,
+   "humMax": 42,
+   "hum": 32.5,
+   "snowType": "Fine-grained",
+   "weather": "Clear",
+   "cls": "A: Cold / dry (snow <= -4.5C, or <25% humidity and snow <= -3C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Skigo Booster Cold + Vola NSD2319",
+     "type": "Liquid + powder",
+     "apply": "Sponge + iron 200C",
+     "remove": "Rotor horsehair / rotor steel / rotor nylon",
+     "points": 3,
+     "products": [
+      "Skigo Booster Cold",
+      "Vola NSD2319"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Swix PS6",
+     "type": "Glider",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair / rotor steel / rotor nylon",
+     "points": 2,
+     "products": [
+      "Swix PS6"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Swix PS6 + Rode RW20",
+     "type": "Glider + block",
+     "apply": "Iron 200C + wool block",
+     "remove": "Rotor horsehair / steel / nylon + wool",
+     "points": 1,
+     "products": [
+      "Swix PS6",
+      "Rode RW20"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Toko HP Blue",
+     "products": [
+      "Toko HP Blue"
+     ]
+    },
+    {
+     "name": "Toko HP Blue/Skigo LDQ 50/50",
+     "products": [
+      "Toko HP Blue",
+      "Skigo LDQ"
+     ]
+    },
+    {
+     "name": "Swix HS6",
+     "products": [
+      "Swix HS6"
+     ]
+    },
+    {
+     "name": "Vola NSD2319",
+     "products": [
+      "Vola NSD2319"
+     ]
+    },
+    {
+     "name": "Vola HM Race Purple",
+     "products": [
+      "Vola HM Race Purple"
+     ]
+    }
+   ],
+   "bestFeel": "Skigo Booster Cold + Vola NSD2319",
+   "distance": "5 km: Skigo Booster Cold + Vola NSD2319 gained 20 cm vs Swix PS6",
+   "notes": "Surprisingly moist snow (39% track, 23% top) after a long cold period. Booster Cold gave a big lift vs plain NSD2319. Toko Jet Cold liquid sprayed on top after the final lifted 20 cm."
+  },
+  {
+   "id": "2026-02-26",
+   "date": "2026-02-26",
+   "season": "2025/26",
+   "title": "Fluorfritest 26. februar",
+   "kind": "Topcoat",
+   "air": 1,
+   "airHum": null,
+   "snow": -2,
+   "snowEst": false,
+   "humMin": 71,
+   "humMax": 96,
+   "hum": 83.5,
+   "snowType": "Wet",
+   "weather": "Rain and fog",
+   "cls": "C: Wet (>=55% humidity, snow ~0C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Skigo FFR Yellow",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair / rotor steel / rotor nylon",
+     "points": 3,
+     "products": [
+      "Skigo FFR Yellow"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Skigo FFR Yellow + Skigo CM26",
+     "type": "Powder + block",
+     "apply": "Iron 200C + iron 120C",
+     "remove": "Rotor horsehair / rotor steel / rotor nylon",
+     "points": 2,
+     "products": [
+      "Skigo FFR Yellow",
+      "Skigo CM26"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Star Next Dark Wet",
+     "type": "Powder",
+     "apply": "Iron 200C",
+     "remove": "Rotor horsehair / rotor steel / rotor nylon",
+     "points": 1,
+     "products": [
+      "Star Next Dark Wet"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Skigo CM26",
+     "products": [
+      "Skigo CM26"
+     ]
+    },
+    {
+     "name": "Star Next KC001",
+     "products": [
+      "Star Next KC001"
+     ]
+    },
+    {
+     "name": "Vola NSD2415",
+     "products": [
+      "Vola NSD2415"
+     ]
+    },
+    {
+     "name": "Skigo CM26 + Skigo FFR Yellow",
+     "products": [
+      "Skigo CM26",
+      "Skigo FFR Yellow"
+     ]
+    },
+    {
+     "name": "Toko Jet Warm liquid",
+     "products": [
+      "Toko Jet Warm liquid"
+     ]
+    }
+   ],
+   "bestFeel": "Skigo FFR Yellow",
+   "distance": "",
+   "notes": "96% humidity in the track, 71% on top. FFR Yellow the clear winner on glide and feel. CM26 over or under FFR Yellow gave no lift. Separate 4-pair liquid series: Toko Jet Warm and HWK UHX Warm stood out on speed and feel."
+  },
+  {
+   "id": "2026-03-19",
+   "date": "2026-03-19",
+   "season": "2025/26",
+   "title": "Glidtest World Cup Skiskyting 19. mars",
+   "kind": "Topcoat (liquids)",
+   "air": 6,
+   "airHum": null,
+   "snow": 0,
+   "snowEst": false,
+   "humMin": 70,
+   "humMax": 70,
+   "hum": 70.0,
+   "snowType": "Coarse, moist, salted tracks",
+   "weather": "Sun",
+   "cls": "C: Wet (>=55% humidity, snow ~0C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Toko Prototype liquid",
+     "type": "Liquid",
+     "apply": "Spray",
+     "remove": "None",
+     "points": 3,
+     "products": [
+      "Toko Prototype liquid"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Rode RW50",
+     "type": "Block",
+     "apply": "Rubbed on",
+     "remove": "Rotor felt + rotor wool",
+     "points": 2,
+     "products": [
+      "Rode RW50"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Toko Jet Warm liquid",
+     "type": "Liquid",
+     "apply": "Spray",
+     "remove": "None",
+     "points": 1,
+     "products": [
+      "Toko Jet Warm liquid"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Skigo FFR Yellow",
+     "products": [
+      "Skigo FFR Yellow"
+     ]
+    },
+    {
+     "name": "Rode Superwet liquid",
+     "products": [
+      "Rode Superwet liquid"
+     ]
+    },
+    {
+     "name": "Toko Jet Black liquid",
+     "products": [
+      "Toko Jet Black liquid"
+     ]
+    },
+    {
+     "name": "Star Next Warm liquid",
+     "products": [
+      "Star Next Warm liquid"
+     ]
+    },
+    {
+     "name": "HWK FFL34 liquid",
+     "products": [
+      "HWK FFL34 liquid"
+     ]
+    }
+   ],
+   "bestFeel": "Toko Prototype liquid",
+   "distance": "Toko Prototype gained considerably after distance; Rode RW50 lost to liquid on retest",
+   "notes": "Before the biathlon World Cup in Holmenkollen. Salted tracks. Toko Prototype best on glide and feel. Toko Jet Warm a very good, competitive alternative."
+  },
+  {
+   "id": "2026-03-26",
+   "date": "2026-03-26",
+   "season": "2025/26",
+   "title": "Fluorfritest 26. mars",
+   "kind": "Method / brushes / combinations",
+   "air": 8,
+   "airHum": null,
+   "snow": 0,
+   "snowEst": false,
+   "humMin": 90,
+   "humMax": 90,
+   "hum": 90.0,
+   "snowType": "Coarse, moist",
+   "weather": "Sun",
+   "cls": "C: Wet (>=55% humidity, snow ~0C)",
+   "podium": [
+    {
+     "place": 1,
+     "name": "Toko Prototype liquid + Skigo FFR Yellow + Toko Prototype liquid",
+     "type": "Liquid + powder + liquid",
+     "apply": "Spray + iron 200C + spray",
+     "remove": "Red Creek rotor horsehair / rotor steel / rotor nylon on powder",
+     "points": 3,
+     "products": [
+      "Toko Prototype liquid",
+      "Skigo FFR Yellow"
+     ]
+    },
+    {
+     "place": 2,
+     "name": "Skigo FFC Yellow + Skigo FFR Yellow",
+     "type": "Glider + powder",
+     "apply": "Iron 125C + iron 200C",
+     "remove": "Rotor horsehair / rotor steel / rotor nylon",
+     "points": 2,
+     "products": [
+      "Skigo FFC Yellow",
+      "Skigo FFR Yellow"
+     ]
+    },
+    {
+     "place": 3,
+     "name": "Toko Prototype liquid (x2)",
+     "type": "Liquid",
+     "apply": "Spray the day before + spray right before",
+     "remove": "None",
+     "points": 1,
+     "products": [
+      "Toko Prototype liquid"
+     ]
+    }
+   ],
+   "others": [
+    {
+     "name": "Skigo FFR Yellow",
+     "products": [
+      "Skigo FFR Yellow"
+     ]
+    },
+    {
+     "name": "Toko Prototype liquid",
+     "products": [
+      "Toko Prototype liquid"
+     ]
+    },
+    {
+     "name": "Skigo FFR Yellow (Skigo horsehair+steel+nylon brushes)",
+     "products": [
+      "Skigo FFR Yellow"
+     ]
+    },
+    {
+     "name": "Skigo FFR Yellow (Toko horsehair+copper+nylon brushes)",
+     "products": [
+      "Skigo FFR Yellow"
+     ]
+    }
+   ],
+   "bestFeel": "Toko Prototype liquid + Skigo FFR Yellow + Toko Prototype liquid",
+   "distance": "",
+   "notes": "Focus on method and brushes. Winner best on pure glide and feel. FFC Yellow + FFR Yellow just behind on glide, heavier feel. Toko Prototype also good alone (sprayed twice or once)."
+  }
+ ]
+}

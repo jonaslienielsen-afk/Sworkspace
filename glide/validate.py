@@ -140,7 +140,7 @@ def main():
         print(fmt("random", rb))
         print(fmt("overall form", run(overall, forward)))
         print(fmt("same condition class", run(same_class, forward)))
-        print(fmt("model 3C / 12% (default)", run(kernel(3, 12), forward)))
+        print(fmt("model 2C / 30% (default)", run(kernel(2, 30), forward)))
         rows = []
         for s, h in grid([1, 2, 3, 5, 8, 1000], [5, 8, 12, 20, 30, 1000]):
             rows.append(((s, h), run(kernel(s, h), forward)))

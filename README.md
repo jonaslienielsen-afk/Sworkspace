@@ -75,3 +75,17 @@ barcodes (the browser's built-in `BarcodeDetector` is used when available).
 - Hold the phone so the serial number runs horizontally inside the box.
 - Wipe off snow and wax. Engraved or very small numbers may need a closer shot
   or manual entry.
+
+## Glide Picker (`/glide/`)
+
+A second app in the same site: pick a fluor-free glide wax for a day in
+Holmenkollen from Bull Superski's glide tests (29 tests, Dec 2023 – Mar 2026).
+Enter snow temperature (or air temperature) and snow humidity, and it ranks
+the gliders that did best in the most similar test conditions, with how Bull
+applied them. It also lists every test and per-product statistics, and works
+offline.
+
+- App: `src/glide/` (model in `src/glide/model.js`, tests in `test/glide.test.mjs`)
+- Data: `glide/glide_data.py` is the source; run `python3 glide/build_tables.py`
+  to regenerate the tables and `src/glide/data.json` after adding a test.
+- Method and back-testing: `glide/predict.py`, `glide/validate.py`, `glide/RESULTS.md`

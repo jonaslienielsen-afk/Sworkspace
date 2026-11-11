@@ -155,7 +155,7 @@ Products that were tested but never reached the podium are in `glide_product_sta
 
 ## Predicting a race day in Holmenkollen
 
-`predict.py` weights every past test by how close its snow temperature and snow humidity are to the forecast and returns the products with the highest expected placing points:
+`predict.py` (and the Glide Picker app in `src/glide/`) weights every past test by how close its snow temperature and snow humidity are to the forecast and returns the products with the highest expected placing points:
 
 ```
 python3 predict.py --snow-temp -2 --humidity 35

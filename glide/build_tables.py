@@ -176,7 +176,7 @@ def write_md(path, tests, stats):
         lines.append(f"### Best in class {c}\n")
         lines.append(md_table(top, ["Product", f"{key} tests", f"{key} wins", f"{key} points"]) + "\n")
     lines += ["## Predicting a race day in Holmenkollen\n",
-              "`predict.py` weights every past test by how close its snow temperature and snow humidity "
+              "`predict.py` (and the Glide Picker app in `src/glide/`) weights every past test by how close its snow temperature and snow humidity "
               "are to the forecast and returns the products with the highest expected placing points:\n",
               "```\npython3 predict.py --snow-temp -2 --humidity 35\n"
               "python3 predict.py --air-temp 4 --humidity 70   # snow temp estimated from air\n```\n",
@@ -195,6 +195,8 @@ def main():
     write_csv("glide_product_stats.csv", stats)
     write_xlsx("glide_tests.xlsx", [("Tests", tests), ("Product stats", stats), ("Results long", longr)])
     write_md("RESULTS.md", tests, stats)
+    from export_json import export
+    export()
     print(f"{len(tests)} tests, {len(longr)} results, {len(stats)} products")
 
 
